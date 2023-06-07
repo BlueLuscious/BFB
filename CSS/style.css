@@ -1,0 +1,97 @@
+/*oculta barras de navegacion*/
+body {
+    overflow: hidden;
+}
+
+/*titulo prinpipal*/
+.firstTitle h1 {
+    margin-top: 75px;
+    position: relative;
+    left: 75px;
+}
+
+/*bienvenida*/
+.secondTitle h1 {
+    position: relative;
+    left: 200px;
+    top: 150px;
+}
+
+/*formulario*/
+.form {
+    position: relative;
+    left: 200px;
+    top: 175px;
+}
+
+.tableData3 {
+    margin: 0px;
+    padding-top: 20px;
+}
+
+td {
+    margin: 0px;
+    padding: 5px;
+}
+
+label {
+    display: flex;
+    justify-content: left;
+
+}
+
+/*entrada de datos*/
+input {
+    margin: 0px;
+    padding: 15px;
+    border: 1.5px solid transparent;
+    transition: border-color 0.3s;
+    border-radius: 10px;
+    background-color: rgb(246, 246, 246);
+}
+
+/*borde parapadeante para entrada de datos*/
+input:hover {
+    border-color: rgb(210, 210, 210);
+}
+
+/*botones*/
+button {
+    margin: 0;
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    width: 410px;
+}
+
+/*parpadeo para botones*/
+button:hover {
+    animation: blink-hover 1s infinite;
+}
+
+@keyframes blink-hover {
+    0% {opacity: 0.3;}
+    50% {opacity: 0.3;}
+    100% {opacity: 0.3;}
+}
+
+/*logueo*/
+#send {
+    color: black;
+    background-color: rgb(37, 212, 212);
+}
+
+/*registro*/
+#delete {
+    color: white;
+    background-color: black;
+}
+
+/*imagen principal*/
+.mainImage img {
+    width: 1200px;
+    height: 1200px;
+    position: relative;
+    left: 825px;
+    bottom: 750px;
+}

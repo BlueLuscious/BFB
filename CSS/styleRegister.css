@@ -1,0 +1,92 @@
+.mainTitle h1 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 75px;
+}
+
+/*titulo de registro*/
+.registerTitle h2, .registerTitle h3 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 125px;
+}
+
+.registerTitle h3 {
+  color: rgb(131, 131, 131);
+}
+
+/*formulario*/
+.form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 150px;
+}
+
+table {
+  margin: 0px;
+  padding: 20px;
+}
+
+.tableData3, .tableData5 {
+  margin: 0px;
+  padding-top: 20px;
+}
+
+td {
+  margin: 0;
+  padding: 5px;
+  border: 0;
+}
+
+label {
+  display: flex;
+  justify-content: left;
+  
+}
+ /*entrada de datos*/
+input {
+  margin: 0px;
+  padding: 15px;
+  border: 1.5px solid transparent;
+  transition: border-color 0.3s;
+  border-radius: 10px;
+  background-color: rgb(246, 246, 246);
+}
+
+/*borde parapadeante para entrada de datos*/
+input:hover {
+  border-color: rgb(210, 210, 210);
+}
+
+/*botones*/
+button {
+  margin: 0;
+  padding: 15px;
+  border: 0;
+  border-radius: 10px;
+  width: 410px;
+  position: relative;
+  top: 50px;
+}
+
+/*registro*/
+#next {
+  color: black;
+  background-color: rgb(37, 212, 212);
+}
+
+/*parpadeo para boton next*/
+#next:hover {
+  animation: blink-hover 1s infinite;
+}
+
+@keyframes blink-hover {
+  0% {opacity: 0.7;}
+  50% {opacity: 0.7;}
+  100% {opacity: 0.7;}
+}
+
+
