@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barba Firepower Bootcamp</title>
     <link rel="stylesheet" href="../CSS/styleRegister.css" type="text/css">
+    <script src="../JS/node.js"></script>
 </head>
 <body>
     <div class="mainTitle">
@@ -19,64 +20,51 @@
         <form action="data.html" method="post" enctype="multipart/form-data">
             <div class="table1">
                 <table>
-                    <div class="tableRow1">
                         <tr>
                             <td class="tableData1">
                                 <label for="eMail"><strong>Enter your email:</strong></label>
                             </td>
                         </tr>
-                    </div>
-                    <div class="tableRow2">
                         <tr>
                             <td class="tableData2">
                                 <input type="email" name="eMail" id="eMail" size="50" placeholder="JohnDoe@gmail.com">
                             </td>
                         </tr>
-                    </div>
-                    <div class="tableRow3">
+
                         <tr>
                             <td class="tableData3">
                                 <label for="firstName"><strong>First Name:</strong></label>
                             </td>
                         </tr>
-                    </div>
-                    <div class="tableRow4">
                         <tr>
                             <td class="tableData4">
                                 <input type="text" name="firstName" id="firstName" size="50" placeholder="John">
                             </td>
                         </tr>
-                    </div>
-                    <div class="tableRow5">
                         <tr>
                             <td class="tableData5">
                                 <label for="lastName"><strong>Last Name:</strong></label>
                             </td>
                         </tr>
-                    </div>
-                    <div class="tableRow6">
                         <tr>
                             <td class="tableData6">
                                 <input type="text" name="lastName" id="lastName" size="50" placeholder="Doe">
                             </td>
                         </tr>
-                    </div>
                 </table>
             </div>
             <div class="table2">
                 <table>
-                    <div>
                         <tr>
                             <td>
-                                <a href="index.html"><button type="button" name="back" id="back" disabled><strong>Back</strong></button></a>
+                                <button type="button" name="back" id="back" disabled><strong>Back</strong></button>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <a href="register2.html"><button type="button" name="next" id="next"><strong>Next Step</strong></button></a>
+                                <button type="button" name="next" id="next" onclick="redirectToRegister2()"><strong>Next Step</strong></button>
                             </td>
                         </tr>
-                    </div>
                 </table>
             </div>
         </form>
