@@ -75,7 +75,7 @@ button {
 /*registro*/
 #next {
   color: black;
-  background-color: rgb(37, 212, 212);
+  background-color: rgb(34, 193, 193);
 }
 
 /*parpadeo para boton next*/
@@ -88,5 +88,3 @@ button {
   50% {opacity: 0.7;}
   100% {opacity: 0.7;}
 }
-
-
