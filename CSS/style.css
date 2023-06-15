@@ -1,24 +1,21 @@
-/*oculta barras de navegacion*/
-body {
+body { /*oculta barras de navegacion*/
     overflow: hidden;
 }
 
-/*titulo prinpipal*/
-.firstTitle h1 {
+.firstTitle h1 { /*titulo prinpipal*/
     margin-top: 75px;
     position: relative;
     left: 75px;
 }
 
-/*bienvenida*/
-.secondTitle h1 {
+.secondTitle h1 { /*bienvenida*/
     position: relative;
     left: 200px;
     top: 150px;
 }
 
 /*formulario*/
-.form {
+.logInForm {
     position: relative;
     left: 200px;
     top: 175px;
@@ -29,6 +26,38 @@ body {
     padding-top: 20px;
 }
 
+.tableData4, .tableData5 {
+    position: relative;
+}
+
+.tableData5 button { /*boton mostrar contraseña*/
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button .bi { /*ojo/boton mostrar contraseña*/ 
+    font-size: 22px;
+}
+
+.tableData5 .popUpText { /*ventana emergente mostrar contraseña*/
+    margin: 0px;
+    padding: 8px;
+    width: 120px;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
 td {
     margin: 0px;
     padding: 5px;
@@ -37,35 +66,31 @@ td {
 label {
     display: flex;
     justify-content: left;
-
 }
 
-/*entrada de datos*/
-input {
+input { /*entrada de datos*/
     margin: 0px;
     padding: 15px;
+    width: 380px;
     border: 1.5px solid transparent;
     transition: border-color 0.3s;
     border-radius: 10px;
     background-color: rgb(246, 246, 246);
 }
 
-/*borde parapadeante para entrada de datos*/
-input:hover {
+input:hover { /*borde parpadeante para entrada de datos*/
     border-color: rgb(210, 210, 210);
 }
 
-/*botones*/
-button {
+.table2 button { /*botones*/
     margin: 0;
     padding: 15px;
+    width: 410px;
     border: 0;
     border-radius: 10px;
-    width: 410px;
 }
 
-/*parpadeo para botones*/
-button:hover {
+.table2 button:hover { /*parpadeo para botones*/
     animation: blink-hover 1s infinite;
 }
 
@@ -75,23 +100,20 @@ button:hover {
     100% {opacity: 0.3;}
 }
 
-/*logueo*/
-#send {
+#logInButton { /*logueo*/
     color: black;
     background-color: rgb(37, 212, 212);
 }
 
-/*registro*/
-#delete {
+#signUpButton { /*registro*/
     color: white;
     background-color: black;
 }
 
-/*imagen principal*/
-.mainImage img {
-    width: 1200px;
-    height: 1200px;
+.mainImage img { /*imagen principal*/
+    width: 1100px;
+    height: 1100px;
     position: relative;
-    left: 825px;
-    bottom: 750px;
+    left: 830px;
+    bottom: 700px;
 }
