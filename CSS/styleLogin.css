@@ -1,22 +1,18 @@
-body { /*oculta barras de navegacion*/
+/* body { 
     overflow: hidden;
-}
+}  *//*oculta barras de navegacion*/
 
-.firstTitle h1 { /*titulo prinpipal*/
+.mainTitle h1 { /*titulo prinpipal*/
     margin-top: 75px;
-    position: relative;
+    position: absolute;
     left: 75px;
 }
 
-.secondTitle h1 { /*bienvenida*/
-    position: relative;
-    left: 200px;
-    top: 150px;
-}
+
 
 /*formulario*/
 .logInForm {
-    position: relative;
+    position: absolute;
     left: 200px;
     top: 175px;
 }
@@ -82,7 +78,7 @@ input:hover { /*borde parpadeante para entrada de datos*/
     border-color: rgb(210, 210, 210);
 }
 
-.table2 button { /*botones*/
+#logInButton, #signUpButton { /*botones*/
     margin: 0;
     padding: 15px;
     width: 410px;
@@ -90,7 +86,7 @@ input:hover { /*borde parpadeante para entrada de datos*/
     border-radius: 10px;
 }
 
-.table2 button:hover { /*parpadeo para botones*/
+#logInButton:hover, #signUpButton:hover { /*parpadeo para botones*/
     animation: blink-hover 1s infinite;
 }
 
