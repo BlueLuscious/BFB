@@ -1,0 +1,119 @@
+body { /*oculta barras de navegacion*/
+    overflow: hidden;
+}
+
+.firstTitle h1 { /*titulo prinpipal*/
+    margin-top: 75px;
+    position: relative;
+    left: 75px;
+}
+
+.secondTitle h1 { /*bienvenida*/
+    position: relative;
+    left: 200px;
+    top: 150px;
+}
+
+/*formulario*/
+.logInForm {
+    position: relative;
+    left: 200px;
+    top: 175px;
+}
+
+.tableData3 {
+    margin: 0px;
+    padding-top: 20px;
+}
+
+.tableData4, .tableData5 {
+    position: relative;
+}
+
+.tableData5 button { /*boton mostrar contraseña*/
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button .bi { /*ojo/boton mostrar contraseña*/ 
+    font-size: 22px;
+}
+
+.tableData5 .popUpText { /*ventana emergente mostrar contraseña*/
+    margin: 0px;
+    padding: 8px;
+    width: 120px;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+td {
+    margin: 0px;
+    padding: 5px;
+}
+
+label {
+    display: flex;
+    justify-content: left;
+}
+
+input { /*entrada de datos*/
+    margin: 0px;
+    padding: 15px;
+    width: 380px;
+    border: 1.5px solid transparent;
+    transition: border-color 0.3s;
+    border-radius: 10px;
+    background-color: rgb(246, 246, 246);
+}
+
+input:hover { /*borde parpadeante para entrada de datos*/
+    border-color: rgb(210, 210, 210);
+}
+
+.table2 button { /*botones*/
+    margin: 0;
+    padding: 15px;
+    width: 410px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.table2 button:hover { /*parpadeo para botones*/
+    animation: blink-hover 1s infinite;
+}
+
+@keyframes blink-hover {
+    0% {opacity: 0.3;}
+    50% {opacity: 0.3;}
+    100% {opacity: 0.3;}
+}
+
+#logInButton { /*logueo*/
+    color: black;
+    background-color: rgb(37, 212, 212);
+}
+
+#signUpButton { /*registro*/
+    color: white;
+    background-color: black;
+}
+
+.mainImage img { /*imagen principal*/
+    width: 1100px;
+    height: 1100px;
+    position: relative;
+    left: 830px;
+    bottom: 700px;
+}
