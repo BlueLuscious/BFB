@@ -1,13 +1,13 @@
 /*index.html*/
 window.addEventListener('DOMContentLoaded', function () {
 
-    let signUpButton = document.getElementById('signUpButton')
-    let passwordInput = document.getElementById('passwordInput')
-    let showPasswordButton = document.getElementById('showPasswordButton')
-    let logInButton = document.getElementById('logInButton')
-    let popUpText = document.getElementById('popUpText')
+    const signUpButton = document.getElementById('signUpButton')
+    const passwordInput = document.getElementById('passwordInput')
+    const showPasswordButton = document.getElementById('showPasswordButton')
+    const logInButton = document.getElementById('logInButton')
+    const popUpText = document.getElementById('popUpText')
     let clickCount = 0
-    let contentPopUpText = ['Show Password', 'Hide Password']
+    const contentPopUpText = ['Show Password', 'Hide Password']
 
     // redireccion a pag. de registro
     signUpButton.addEventListener('click', function () {
