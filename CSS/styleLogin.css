@@ -1,45 +1,8 @@
-/* class */
-.mainTitle h1 {
-    position: absolute;
-    top: 75px;
-    left: 100px;
-} /* main title */
+/* ELEMENT */
+body {
+    font-family: ;
+}
 
-.displayForm {
-    position: absolute;
-    left: 200px;
-    top: 250px;
-} /* display form */
-
-.displayPassword {
-    padding-top: 20px;
-} 
-
-.displayPopUp button {
-    position: absolute;
-    top: 240px;
-    left: 380px;
-    background: none;
-    border: none;
-    cursor: pointer;
-} /* show password button */
-
-.displayPopUp .popUpText {
-    margin: 0px;
-    padding: 8px;
-    width: 120px;
-    position: absolute;
-    top: 236px;
-    left: 440px;
-    border-radius: 6px;
-    opacity: 0;
-    transition: opacity 0.5s;
-    text-align: center;
-    color: white;
-    background-color: black;
-} /* show popup password */
-
-/* element */
 td {
     margin: 0px;
     padding: 5px;
@@ -69,6 +32,56 @@ button .bi {
     font-size: 22px;
 } /* eye icon */
 
+/* CLASS */
+.mainTitle h1 {
+    position: absolute;
+    top: 75px;
+    left: 100px;
+} /* main title */
+
+.displayForm {
+    position: absolute;
+    left: 200px;
+    top: 250px;
+} /* display form */
+
+.displayPassword {
+    padding-top: 20px;
+} 
+
+.displayPopUp button {
+    position: absolute;
+    top: 240px;
+    left: 380px;
+    background: none;
+    border: none;
+    cursor: pointer;
+} /* show/hide password button */
+
+.displayPopUp .popUpText {
+    margin: 0px;
+    padding: 8px;
+    width: 120px;
+    position: absolute;
+    top: 236px;
+    left: 440px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    text-align: center;
+    color: white;
+    background-color: black;
+} /* show popup password */
+
+.mainImage img {
+    width: 1100px;
+    height: 1100px;
+    position: fixed;
+    left: 830px;
+    bottom: 0;
+} /* display main image */
+
+/* ID */
 #logInButton, #signUpButton {
     margin: 0;
     padding: 15px;
@@ -89,17 +102,9 @@ button .bi {
 #logInButton {
     color: black;
     background-color: rgb(37, 212, 212);
-} /*logueo*/
+} /* log in */
 
 #signUpButton {
     color: white;
     background-color: black;
-} /*registro*/
-
-.mainImage img {
-    width: 1100px;
-    height: 1100px;
-    position: fixed;
-    left: 830px;
-    bottom: 0;
-} /*imagen principal*/
+} /* sign up */
