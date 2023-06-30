@@ -55,5 +55,4 @@ window.addEventListener('DOMContentLoaded', function () {
 
     // BACK
     // mediante logInButton validar si los datos existen en el servidor
-
 })
