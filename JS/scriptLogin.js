@@ -14,8 +14,37 @@ window.addEventListener('DOMContentLoaded', function () {
         window.location.href = 'register.html'
     }) // sign up bottom redirects to register.html
 
+
+
+    const inputs = [emailInput, passwordInput]
+
+    inputs.forEach(function (input, index) {
+        input.addEventListener('mouseover', function () {
+            if (index == 0) {
+                this.style.borderColor = '#000000'
+            } else if (index == 1) {
+                this.style.borderColor = '#000000'
+            }
+        })
+        input.addEventListener('mouseout', function () {
+            if (index == 0) {
+                this.style.borderColor = ''
+            } else if (index == 1) {
+                this.style.borderColor = ''
+            }
+        })
+        input.addEventListener('focus', function () {
+            if (index == 0) {
+                this.style.borderColor = '#ff0000'
+            } else if (index == 1) {
+                this.style.borderColor = '#ff0000'
+            }
+        })
+    })
+
+
     showPasswordButton.addEventListener('click', function () {
-        if (passwordInput.type == 'password') {
+        if (passwordInput.type === 'password') {
             passwordInput.type = 'text'
             $('.icon').removeClass('bi bi-eye-fill').addClass('bi bi-eye-slash-fill')
         } else {
