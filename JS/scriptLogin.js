@@ -1,4 +1,3 @@
-/*index.html*/
 window.addEventListener('DOMContentLoaded', function () {
 
     const signUpButton = document.getElementById('signUpButton')
@@ -9,21 +8,6 @@ window.addEventListener('DOMContentLoaded', function () {
     let clickCount = 0
     const contentPopUpText = ['Show Password', 'Hide Password']
 
-    // redireccion a pag. de registro
-    signUpButton.addEventListener('click', function () {
-        window.location.href = 'register.html'
-    })
-
-    // ojo/boton mostrar contraseña
-    showPasswordButton.addEventListener('click', function () {
-        if (passwordInput.type == 'password') {
-            passwordInput.type = 'text'
-            $('.icon').removeClass('bi bi-eye-fill').addClass('bi bi-eye-slash-fill')
-        } else {
-            passwordInput.type = 'password'
-            $('.icon').removeClass('bi bi-eye-slash-fill').addClass('bi bi-eye-fill')
-        }
-    })
 
     // validar formulario
     logInButton.addEventListener('click', function (event) {
@@ -50,6 +34,23 @@ window.addEventListener('DOMContentLoaded', function () {
 
         document.getElementById('loginForm').submit();
     })
+
+    // redireccion a pag. de registro
+    signUpButton.addEventListener('click', function () {
+        window.location.href = 'register.html'
+    })
+
+    // ojo/boton mostrar contraseña
+    showPasswordButton.addEventListener('click', function () {
+        if (passwordInput.type == 'password') {
+            passwordInput.type = 'text'
+            $('.icon').removeClass('bi bi-eye-fill').addClass('bi bi-eye-slash-fill')
+        } else {
+            passwordInput.type = 'password'
+            $('.icon').removeClass('bi bi-eye-slash-fill').addClass('bi bi-eye-fill')
+        }
+    })
+
 
     // mostrar ventana emergente
     showPasswordButton.addEventListener('mouseover', function () {
