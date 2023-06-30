@@ -91,6 +91,7 @@ button .bi {
     width: 410px;
     border: 0;
     border-radius: 10px;
+    cursor: pointer;
 } /* button */
 
 #logInButton:hover, #signUpButton:hover {
