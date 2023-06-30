@@ -40,8 +40,7 @@ window.addEventListener('DOMContentLoaded', function () {
     showPasswordButton.addEventListener('mouseover', function () {
         popUpText.style.visibility = 'visible'
         popUpText.style.opacity = 1
-    }) // hide popup by mouseover
-
+    }) // show popup by mouseover
 
     showPasswordButton.addEventListener('mouseout', function () {
         popUpText.style.visibility = 'hidden'
