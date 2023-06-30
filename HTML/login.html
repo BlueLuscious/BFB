@@ -14,9 +14,9 @@
     <div class="mainTitle">
         <h1>Barba Firepower Bootcamp</h1>
     </div>
-    <div class="logInForm" id="logInForm"> <!--formulario-->
+    <div class="displayForm" id="logInForm"> <!--formulario-->
         <form action="home.html" method="get" enctype="multipart/form-data">
-            <div class="table1"> <!--entrada de datos-->
+            <div class="displayTable"> <!--entrada de datos-->
                 <table>
                     <tr>
                         <td>
@@ -35,15 +35,17 @@
                             <label for="passwordInput"><strong>Password:</strong></label>
                             <input type="password" name="passwordInput" id="passwordInput" size="50" placeholder="Enter your password">
                         </td>
+                    </tr>
+                    <tr>
                         <td class="displayPopUp"> <!--ojo/boton mostrar contraseña-->
-                            <button type="button" id="showPasswordButton" class="showPasswordButton"><i id="eyeIcon" class="bi bi-eye-fill icon"></i></button>
-                            <i class="popUpText" id="popUpText">Show Password</i>
+                            <button type="button" id="showPasswordButton" class="showPasswordButton"><div id="eyeIcon" class="bi bi-eye-fill icon"></div></button>
+                            <div class="popUpText" id="popUpText">Show Password</div>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <br><br><br><br>
-                            <button type="submit" name="login" id="logInButton"><strong>Log In</strong></button>
+                            <br><br><br>
+                            <button name="login" id="logInButton"><strong>Log In</strong></button>
                         </td>
                     </tr>
                     <tr>
