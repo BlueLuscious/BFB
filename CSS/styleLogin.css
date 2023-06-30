@@ -9,12 +9,6 @@ td {
     padding: 5px;
 }
 
-label {
-    display: flex;
-    justify-content: left;
-    margin-bottom: 10px;
-}
-
 input {
     margin: 0px;
     padding: 15px;
@@ -58,7 +52,7 @@ button .bi {
 
 .displayPopUp button {
     position: absolute;
-    top: 148px;
+    top: 164px;
     left: 380px;
     background: none;
     border: none;
@@ -70,7 +64,7 @@ button .bi {
     padding: 10px;
     width: 120px;
     position: absolute;
-    top: 143px;
+    top: 159px;
     left: 440px;
     border-radius: 6px;
     opacity: 0;
