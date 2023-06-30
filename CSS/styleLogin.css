@@ -1,6 +1,7 @@
 /* ELEMENT */
 body {
-    font-family: ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 td {
@@ -37,12 +38,18 @@ button .bi {
     position: absolute;
     top: 75px;
     left: 100px;
-} /* main title */
+} /* display main title */
+
+.greetAndMeet h2 {
+    position: absolute;
+    top: 250px;
+    left: 200px;
+} /* display greeting */
 
 .displayForm {
     position: absolute;
+    top: 350px;
     left: 200px;
-    top: 250px;
 } /* display form */
 
 .displayPassword {
@@ -51,7 +58,7 @@ button .bi {
 
 .displayPopUp button {
     position: absolute;
-    top: 240px;
+    top: 148px;
     left: 380px;
     background: none;
     border: none;
@@ -60,14 +67,15 @@ button .bi {
 
 .displayPopUp .popUpText {
     margin: 0px;
-    padding: 8px;
+    padding: 10px;
     width: 120px;
     position: absolute;
-    top: 236px;
+    top: 143px;
     left: 440px;
     border-radius: 6px;
     opacity: 0;
     transition: opacity 0.5s;
+    font-size: 15px;
     text-align: center;
     color: white;
     background-color: black;
@@ -101,7 +109,7 @@ button .bi {
 
 #logInButton {
     color: black;
-    background-color: rgb(37, 212, 212);
+    background-color: rgb(29, 186, 186);
 } /* log in */
 
 #signUpButton {
