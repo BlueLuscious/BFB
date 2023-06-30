@@ -2,6 +2,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     const emailInput = document.getElementById('emailInput')
     const passwordInput = document.getElementById('passwordInput')
+    const inputs = [emailInput, passwordInput]
     const showPasswordButton = document.getElementById('showPasswordButton')
     const logInButton = document.getElementById('logInButton')
     const signUpButton = document.getElementById('signUpButton')
@@ -15,32 +16,15 @@ window.addEventListener('DOMContentLoaded', function () {
     }) // sign up bottom redirects to register.html
 
 
-
-    const inputs = [emailInput, passwordInput]
-
     inputs.forEach(function (input, index) {
-        input.addEventListener('mouseover', function () {
-            if (index == 0) {
-                this.style.borderColor = '#000000'
-            } else if (index == 1) {
-                this.style.borderColor = '#000000'
-            }
-        })
-        input.addEventListener('mouseout', function () {
-            if (index == 0) {
-                this.style.borderColor = ''
-            } else if (index == 1) {
-                this.style.borderColor = ''
-            }
-        })
         input.addEventListener('focus', function () {
             if (index == 0) {
-                this.style.borderColor = '#ff0000'
+                this.style.outlineColor = 'rgb(29, 186, 186)'
             } else if (index == 1) {
-                this.style.borderColor = '#ff0000'
+                this.style.outlineColor = 'rgb(29, 186, 186)'
             }
         })
-    })
+    }) // change input's outline color
 
 
     showPasswordButton.addEventListener('click', function () {
