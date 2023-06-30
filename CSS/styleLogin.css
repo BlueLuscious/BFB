@@ -1,48 +1,45 @@
 /* class */
 .mainTitle h1 {
     position: absolute;
-    top: 50px;
-    left: 75px;
-} /*titulo prinpipal*/
+    top: 75px;
+    left: 100px;
+} /* main title */
 
-.logInForm {
+.displayForm {
     position: absolute;
     left: 200px;
-    top: 175px;
-} /*formulario*/
+    top: 250px;
+} /* display form */
 
 .displayPassword {
     padding-top: 20px;
-}
+} 
 
-.tableData5 button { /*boton mostrar contraseña*/
+.displayPopUp button {
     position: absolute;
-    top: 16px;
-    right: 20px;
+    top: 240px;
+    left: 380px;
     background: none;
     border: none;
     cursor: pointer;
-}
+} /* show password button */
 
-button .bi { /*ojo/boton mostrar contraseña*/ 
-    font-size: 22px;
-}
-
-.tableData5 .popUpText { /*ventana emergente mostrar contraseña*/
+.displayPopUp .popUpText {
     margin: 0px;
     padding: 8px;
     width: 120px;
     position: absolute;
-    bottom: 10px;
-    left: 15px;
+    top: 236px;
+    left: 440px;
     border-radius: 6px;
     opacity: 0;
     transition: opacity 0.5s;
     text-align: center;
     color: white;
     background-color: black;
-}
+} /* show popup password */
 
+/* element */
 td {
     margin: 0px;
     padding: 5px;
@@ -51,9 +48,10 @@ td {
 label {
     display: flex;
     justify-content: left;
+    margin-bottom: 10px;
 }
 
-input { /*entrada de datos*/
+input {
     margin: 0px;
     padding: 15px;
     width: 380px;
@@ -61,19 +59,23 @@ input { /*entrada de datos*/
     transition: border-color 0.3s;
     border-radius: 10px;
     background-color: rgb(246, 246, 246);
-}
+} /* data inputs */
 
-input:hover { /*borde parpadeante para entrada de datos*/
+input:hover {
     border-color: rgb(210, 210, 210);
-}
+} /* data inputs blinking border*/
 
-#logInButton, #signUpButton { /*botones*/
+button .bi { 
+    font-size: 22px;
+} /* eye icon */
+
+#logInButton, #signUpButton {
     margin: 0;
     padding: 15px;
     width: 410px;
     border: 0;
     border-radius: 10px;
-}
+} /* button */
 
 #logInButton:hover, #signUpButton:hover {
     animation: blink-hover 1s infinite;
@@ -82,7 +84,7 @@ input:hover { /*borde parpadeante para entrada de datos*/
     0% {opacity: 0.3;}
     50% {opacity: 0.3;}
     100% {opacity: 0.3;}
-} /*parpadeo para botones*/
+} /* blinking bottons */
 
 #logInButton {
     color: black;
