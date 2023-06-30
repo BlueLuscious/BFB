@@ -15,7 +15,6 @@ window.addEventListener('DOMContentLoaded', function () {
         window.location.href = 'register.html'
     }) // sign up bottom redirects to register.html
 
-
     inputs.forEach(function (input, index) {
         input.addEventListener('focus', function () {
             if (index == 0) {
