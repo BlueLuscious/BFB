@@ -1,14 +1,8 @@
-/* body { 
-    overflow: hidden;
-}  *//*oculta barras de navegacion*/
-
 .mainTitle h1 { /*titulo prinpipal*/
     margin-top: 75px;
     position: absolute;
     left: 75px;
 }
-
-
 
 /*formulario*/
 .logInForm {
@@ -86,30 +80,29 @@ input:hover { /*borde parpadeante para entrada de datos*/
     border-radius: 10px;
 }
 
-#logInButton:hover, #signUpButton:hover { /*parpadeo para botones*/
+#logInButton:hover, #signUpButton:hover {
     animation: blink-hover 1s infinite;
-}
-
+} 
 @keyframes blink-hover {
     0% {opacity: 0.3;}
     50% {opacity: 0.3;}
     100% {opacity: 0.3;}
-}
+} /*parpadeo para botones*/
 
-#logInButton { /*logueo*/
+#logInButton {
     color: black;
     background-color: rgb(37, 212, 212);
-}
+} /*logueo*/
 
-#signUpButton { /*registro*/
+#signUpButton {
     color: white;
     background-color: black;
-}
+} /*registro*/
 
-.mainImage img { /*imagen principal*/
+.mainImage img {
     width: 1100px;
     height: 1100px;
-    position: relative;
+    position: fixed;
     left: 830px;
-    bottom: 700px;
-}
+    bottom: 0;
+} /*imagen principal*/
