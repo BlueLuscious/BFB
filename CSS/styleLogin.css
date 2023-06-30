@@ -15,6 +15,7 @@ input {
     width: 380px;
     border: 1.5px solid transparent;
     transition: border-color 0.3s;
+    transition: outline-color 0,3s;
     border-radius: 10px;
     background-color: rgb(246, 246, 246);
 } /* data inputs */
