@@ -1,19 +1,19 @@
 window.addEventListener('DOMContentLoaded', function () {
 
-    const signUpButton = document.getElementById('signUpButton')
+    const emailInput = document.getElementById('emailInput')
     const passwordInput = document.getElementById('passwordInput')
     const showPasswordButton = document.getElementById('showPasswordButton')
     const logInButton = document.getElementById('logInButton')
+    const signUpButton = document.getElementById('signUpButton')
     const popUpText = document.getElementById('popUpText')
     let clickCount = 0
     const contentPopUpText = ['Show Password', 'Hide Password']
 
-    // redireccion a pag. de registro
+    // FRONT
     signUpButton.addEventListener('click', function () {
         window.location.href = 'register.html'
-    })
+    }) // sign up bottom redirects to register.html
 
-    // ojo/boton mostrar contraseña
     showPasswordButton.addEventListener('click', function () {
         if (passwordInput.type == 'password') {
             passwordInput.type = 'text'
@@ -22,40 +22,28 @@ window.addEventListener('DOMContentLoaded', function () {
             passwordInput.type = 'password'
             $('.icon').removeClass('bi bi-eye-slash-fill').addClass('bi bi-eye-fill')
         }
-    })
+    }) // eye bottom show/hide password
 
-
-    // mostrar ventana emergente
     showPasswordButton.addEventListener('mouseover', function () {
         popUpText.style.visibility = 'visible'
         popUpText.style.opacity = 1
-    })
+    }) // hide popup by mouseover
 
-    // ocultar ventana emergente
+
     showPasswordButton.addEventListener('mouseout', function () {
         popUpText.style.visibility = 'hidden'
         popUpText.style.opacity = 0
-    })
+    }) // hide popup by mouseout
 
-    // ocultar ventana emergente mediante click
     showPasswordButton.addEventListener('click', function () {
         popUpText.style.visibility = 'hidden'
-        popUpText.style.opacity = 0;
+        popUpText.style.opacity = 0
         clickCount++
         let contentIndex = clickCount % contentPopUpText.length
         popUpText.innerHTML = contentPopUpText[contentIndex]
-    })
+    }) // hide popup by click
 
-
-
-
+    // BACK
+    // mediante logInButton validar si los datos existen en el servidor
 
 })
-
-/*register.html*/
-/* function redirectToRegister2() {
-    window.location.href = "register2.html";
-} */
-
-
-
