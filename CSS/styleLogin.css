@@ -1,23 +1,18 @@
-.mainTitle h1 { /*titulo prinpipal*/
-    margin-top: 75px;
+/* class */
+.mainTitle h1 {
     position: absolute;
+    top: 50px;
     left: 75px;
-}
+} /*titulo prinpipal*/
 
-/*formulario*/
 .logInForm {
     position: absolute;
     left: 200px;
     top: 175px;
-}
+} /*formulario*/
 
-.tableData3 {
-    margin: 0px;
+.displayPassword {
     padding-top: 20px;
-}
-
-.tableData4, .tableData5 {
-    position: relative;
 }
 
 .tableData5 button { /*boton mostrar contraseña*/
