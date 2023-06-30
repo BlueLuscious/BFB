@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barba Firepower Bootcamp</title>
+    <link rel="stylesheet" href="../CSS/styleLogin.css" type="text/css">
+    <script src="../JS/scriptLogin.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="mainTitle">
+        <h1>Barba Firepower Bootcamp</h1>
+    </div>
+    <div class="logInForm" id="logInForm"> <!--formulario-->
+        <form action="home.html" method="get" enctype="multipart/form-data">
+            <div class="table1"> <!--entrada de datos-->
+                <table>
+                    <tr>
+                        <td>
+                            <div class="greetAndMeet">
+                                <h1>Welcome, Lovely!</h1>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tableData2">
+                            <label for="emailInput"><strong>Email:</strong></label>
+                            <input type="email" name="emailInput" id="emailInput" size="50" placeholder="Enter your email">
+                        </td>
+                    </tr>
+                        <td class="displayPassword">
+                            <label for="passwordInput"><strong>Password:</strong></label>
+                            <input type="password" name="passwordInput" id="passwordInput" size="50" placeholder="Enter your password">
+                        </td>
+                        <td class="displayPopUp"> <!--ojo/boton mostrar contraseña-->
+                            <button type="button" id="showPasswordButton" class="showPasswordButton"><i id="eyeIcon" class="bi bi-eye-fill icon"></i></button>
+                            <i class="popUpText" id="popUpText">Show Password</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br><br><br><br>
+                            <button type="submit" name="login" id="logInButton"><strong>Log In</strong></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" name="signup" id="signUpButton"><strong>Sign Up</strong></button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+    <div class="mainImage">
+        <img src="../Images/BFB.png" alt="Barba's">
+    </div>
+</body>
+</html>
