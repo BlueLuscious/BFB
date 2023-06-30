@@ -26,7 +26,6 @@ window.addEventListener('DOMContentLoaded', function () {
         })
     }) // change input's outline color
 
-
     showPasswordButton.addEventListener('click', function () {
         if (passwordInput.type === 'password') {
             passwordInput.type = 'text'
