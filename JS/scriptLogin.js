@@ -8,33 +8,6 @@ window.addEventListener('DOMContentLoaded', function () {
     let clickCount = 0
     const contentPopUpText = ['Show Password', 'Hide Password']
 
-
-    // validar formulario
-    logInButton.addEventListener('click', function (event) {
-        event.preventDefault()
-        let password = passwordInput.value
-        if (password.length < 6 || password.length > 12) {
-            alert('La contraseña debe tener entre 6 y 12 caracteres.');
-            return;
-        }
-        if (!/[A-Z]/.test(password)) {
-            alert('La contraseña debe contener al menos una letra mayúscula.');
-            return;
-        }
-        if (!/\d/.test(password)) {
-            alert('La contraseña debe contener al menos un dígito.');
-            return;
-        }
-        if (!/[^a-zA-Z0-9]/.test(password)) {
-            alert('La contraseña debe contener al menos un carácter especial.');
-            return;
-        }
-
-        // agregar otras validaciones
-
-        document.getElementById('loginForm').submit();
-    })
-
     // redireccion a pag. de registro
     signUpButton.addEventListener('click', function () {
         window.location.href = 'register.html'
@@ -76,11 +49,13 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 
-    /*register.html*/
-    function redirectToRegister2() {
-        window.location.href = "register2.html";
-    }
+
 })
+
+/*register.html*/
+/* function redirectToRegister2() {
+    window.location.href = "register2.html";
+} */
 
 
 
