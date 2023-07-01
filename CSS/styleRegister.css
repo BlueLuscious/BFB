@@ -1,46 +1,7 @@
-.mainTitle {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.newCreateTitle {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.enterDataTitle {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(131, 131, 131);
-}
-
-.displayForm-register {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} /* display form */
-
-table {
-  margin: 0px;
-  padding: 20px;
-}
-
-/* .tableData3, .tableData5 {
-  margin: 0px;
-  padding-top: 20px;
-} */
-
+/* ELEMENT */
 td {
-  margin: 0;
-  padding: 5px;
-  border: 0;
+  margin: 0px;
+  padding-bottom: 20px;
 }
 
 label {
@@ -74,6 +35,37 @@ button {
   top: 50px;
 }
 
+/* CLASS */
+.mainTitle {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.newCreateTitle {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.enterDataTitle {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(131, 131, 131);
+}
+
+.displayForm-register {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} /* display form */
+
+/* ID */
 /*registro*/
 #next {
   color: black;
@@ -84,7 +76,6 @@ button {
 #next:hover {
   animation: blink-hover 1s infinite;
 }
-
 @keyframes blink-hover {
   0% {opacity: 0.7;}
   50% {opacity: 0.7;}
