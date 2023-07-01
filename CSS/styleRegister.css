@@ -1,29 +1,31 @@
-.mainTitle h1 {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 75px;
+.mainTitle {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-/*titulo de registro*/
-.registerTitle h2, .registerTitle h3 {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 125px;
+.newCreateTitle {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.registerTitle h3 {
+.enterDataTitle {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: rgb(131, 131, 131);
 }
 
-/*formulario*/
-.form {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: 150px;
-}
+.displayForm-register {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} /* display form */
 
 table {
   margin: 0px;
