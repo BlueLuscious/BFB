@@ -1,5 +1,13 @@
 window.addEventListener('DOMContentLoaded', function () {
 
+    const emailInput = document.getElementById('emailInput')
+    const firstNameInput = document.getElementById('firstNameInput')
+    const lastNameInput = document.getElementById('lastNameInput')
+    const backStep = document.getElementById('backStep')
+    const nextStep = document.getElementById('nextStep')
+
+
+
     // validar formulario
     logInButton.addEventListener('click', function (event) {
         event.preventDefault()
