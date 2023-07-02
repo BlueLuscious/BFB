@@ -10,11 +10,14 @@ window.addEventListener('DOMContentLoaded', function () {
     inputs.forEach(function(input, index) {
        input.addEventListener('click', function () {
             if (index == 0) {
-                 emailInput.value = ''
+                emailInput.value = ''
+                this.style.outlineColor = 'rgb(29, 186, 186)'
             } else if (index == 1) {
-                 firstNameInput.value = ''
+                firstNameInput.value = ''
+                this.style.outlineColor = 'rgb(29, 186, 186)'
             } else if (index == 2) {
-                 lastNameInput.value = ''
+                lastNameInput.value = ''
+                this.style.outlineColor = 'rgb(29, 186, 186)'
             }
        })
     })
