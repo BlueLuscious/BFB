@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
         // agregar otras validaciones
 
-        document.getElementById('loginForm').submit();
+        document.getElementById('sugnUpForm').submit();
     })
 
 })
