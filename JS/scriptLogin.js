@@ -16,12 +16,17 @@ window.addEventListener('DOMContentLoaded', function () {
     }) // sign up bottom redirects to register.html
 
     inputs.forEach(function (input, index) {
-        input.addEventListener('focus', function () {
+        input.addEventListener('click', function () {
             if (index == 0) {
                 emailInput.value = ''
-                this.style.outlineColor = 'rgb(29, 186, 186)'
             } else if (index == 1) {
                 passwordInput.value = ''
+            }
+        })
+        input.addEventListener('focus', function () {
+            if (index == 0) {
+                this.style.outlineColor = 'rgb(29, 186, 186)'
+            } else if (index == 1) {
                 this.style.outlineColor = 'rgb(29, 186, 186)'
             }
         })
