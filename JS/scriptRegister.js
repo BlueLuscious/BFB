@@ -8,15 +8,21 @@ window.addEventListener('DOMContentLoaded', function () {
     const nextStep = document.getElementById('nextStep')
 
     inputs.forEach(function(input, index) {
-       input.addEventListener('click', function () {
+        input.addEventListener('click', function () {
             if (index == 0) {
                 emailInput.value = ''
-                this.style.outlineColor = 'rgb(29, 186, 186)'
             } else if (index == 1) {
                 firstNameInput.value = ''
-                this.style.outlineColor = 'rgb(29, 186, 186)'
             } else if (index == 2) {
                 lastNameInput.value = ''
+            }
+       })
+       input.addEventListener('focus', function () {
+            if (index == 0) {
+                this.style.outlineColor = 'rgb(29, 186, 186)'
+            } else if (index == 1) {
+                this.style.outlineColor = 'rgb(29, 186, 186)'
+            } else if (index == 2) {
                 this.style.outlineColor = 'rgb(29, 186, 186)'
             }
        })
