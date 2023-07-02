@@ -18,8 +18,10 @@ window.addEventListener('DOMContentLoaded', function () {
     inputs.forEach(function (input, index) {
         input.addEventListener('focus', function () {
             if (index == 0) {
+                emailInput.value = ''
                 this.style.outlineColor = 'rgb(29, 186, 186)'
             } else if (index == 1) {
+                passwordInput.value = ''
                 this.style.outlineColor = 'rgb(29, 186, 186)'
             }
         })
