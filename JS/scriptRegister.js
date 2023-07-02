@@ -9,15 +9,15 @@ window.addEventListener('DOMContentLoaded', function () {
 
     inputs.forEach(function(input, index) {
        input.addEventListener('click', function () {
-if (index == 0) {
-emailInput.value = ''
-} else if (index == 1) {
-firstNameInput.value = ''
-} else if (index == 2) {
-lastNameInput.value = ''
-}
-})
-})
+            if (index == 0) {
+                 emailInput.value = ''
+            } else if (index == 1) {
+                 firstNameInput.value = ''
+            } else if (index == 2) {
+                 lastNameInput.value = ''
+            }
+       })
+    })
 
 
     // validar formulario
