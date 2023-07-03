@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', function () {
             } else if (index == 2) {
                 lastNameInput.value = ''
             }
-       })
+       }) // change input's value to blank
        input.addEventListener('focus', function () {
             if (index == 0) {
                 this.style.outlineColor = 'rgb(29, 186, 186)'
@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', function () {
             } else if (index == 2) {
                 this.style.outlineColor = 'rgb(29, 186, 186)'
             }
-       })
+       }) // change input's outline color
     })
 
     returnToLogin.addEventListener('click' , function () {
