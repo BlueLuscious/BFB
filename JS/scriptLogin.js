@@ -4,11 +4,11 @@ window.addEventListener('DOMContentLoaded', function () {
     const passwordInput = document.getElementById('passwordInput')
     const inputs = [emailInput, passwordInput]
     const showPasswordButton = document.getElementById('showPasswordButton')
-    const logInButton = document.getElementById('logInButton')
-    const signUpButton = document.getElementById('signUpButton')
     const popUpText = document.getElementById('popUpText')
     let clickCount = 0
     const contentPopUpText = ['Show Password', 'Hide Password']
+    const logInButton = document.getElementById('logInButton')
+    const signUpButton = document.getElementById('signUpButton')
 
     // FRONT
     signUpButton.addEventListener('click', function () {
