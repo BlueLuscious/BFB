@@ -4,9 +4,12 @@ window.addEventListener('DOMContentLoaded', function () {
     const firstNameInput = document.getElementById('firstNameInput')
     const lastNameInput = document.getElementById('lastNameInput')
     const inputs = [emailInput, firstNameInput, lastNameInput]
+    const returnToLogin = document.getElementById('returnToLogin')
+    const popUpText = document.getElementById('popUpText')
     const backStep = document.getElementById('backStep')
     const nextStep = document.getElementById('nextStep')
 
+    // FRONT
     inputs.forEach(function(input, index) {
         input.addEventListener('click', function () {
             if (index == 0) {
@@ -28,14 +31,31 @@ window.addEventListener('DOMContentLoaded', function () {
        })
     })
 
+    returnToLogin.addEventListener('click' , function () {
+        window.location.href = 'login.html'
+    }) // return login-button redirects to login.
 
-    // validar formulario
+    returnToLogin.addEventListener('mouseover', function () {
+        popUpText.style.visibility = 'visible'
+        popUpText.style.opacity = 1
+    }) // show popup by mouseover
+
+    returnToLogin.addEventListener('mouseout', function () {
+        popUpText.style.visibility = 'hidden'
+        popUpText.style.opacity = 0
+    }) // hide popup by mouseout
+
+
+
+
+
+/*     // validar formulario
     logInButton.addEventListener('click', function (event) {
         event.preventDefault()
 
 
 
-/*         let password = passwordInput.value
+         let password = passwordInput.value
         if (password.length < 6 || password.length > 12) {
             alert('La contraseña debe tener entre 6 y 12 caracteres.');
             return;
@@ -51,11 +71,11 @@ window.addEventListener('DOMContentLoaded', function () {
         if (!/[^a-zA-Z0-9]/.test(password)) {
             alert('La contraseña debe contener al menos un carácter especial.');
             return;
-        } */
+        }
 
         // agregar otras validaciones
 
         document.getElementById('sugnUpForm').submit();
-    })
+    }) */
 
 })
