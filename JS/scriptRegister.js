@@ -13,11 +13,11 @@ window.addEventListener('DOMContentLoaded', function () {
     inputs.forEach(function(input, index) {
         input.addEventListener('click', function () {
             if (index == 0) {
-                emailInput.value = ''
+                this.value = ''
             } else if (index == 1) {
-                firstNameInput.value = ''
+                this.value = ''
             } else if (index == 2) {
-                lastNameInput.value = ''
+                this.value = ''
             }
        }) // change input's value to blank
        input.addEventListener('focus', function () {
