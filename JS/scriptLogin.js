@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const popUpText = document.getElementById('popUpText')
     let clickCount = 0
     const contentPopUpText = ['Show Password', 'Hide Password']
-    const logInButton = document.getElementById('logInButton')
+    const loginButton = document.getElementById('loginButton')
     const signUpButton = document.getElementById('signUpButton')
 
     // FRONT
@@ -61,5 +61,5 @@ window.addEventListener('DOMContentLoaded', function () {
     }) // hide show/hide-password popup by click
 
     // BACK
-    // mediante logInButton validar si los datos existen en el servidor
+    // mediante loginButton validar si los datos existen en el servidor
 })
