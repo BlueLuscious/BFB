@@ -56,12 +56,12 @@ window.addEventListener('DOMContentLoaded', function () {
     returnToLogin.addEventListener('mouseover', function () {
         popUpText.style.visibility = 'visible'
         popUpText.style.opacity = 1
-    }) // show popup by mouseover
+    }) // show return-login popup by mouseover
 
     returnToLogin.addEventListener('mouseout', function () {
         popUpText.style.visibility = 'hidden'
         popUpText.style.opacity = 0
-    }) // hide popup by mouseout
+    }) // hide return-login popup by mouseout
 
     nextStep.addEventListener('click', function () {
         firstPartForm.style.display = 'none'
