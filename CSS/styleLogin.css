@@ -41,17 +41,17 @@ button .bi {
     left: 200px;
 } /* display greeting */
 
-.display-form-login {
+.form-login {
     position: absolute;
     top: 350px;
     left: 200px;
 } /* display form */
 
-.display-password-login {
+.password-login {
     padding-top: 20px;
 } 
 
-.display-popup-login button {
+.show-password-button-login button {
     position: absolute;
     top: 164px;
     left: 380px;
@@ -60,7 +60,7 @@ button .bi {
     cursor: pointer;
 } /* show/hide password button */
 
-.display-popup-login .popUpText {
+.show-password-button-login .pop-up-text {
     margin: 0px;
     padding: 10px;
     width: 120px;
