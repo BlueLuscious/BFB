@@ -24,15 +24,8 @@ input:hover {
   border-color: rgb(210, 210, 210);
 }
 
-/*botones*/
-button {
-  margin: 0;
-  padding: 15px;
-  border: 0;
-  border-radius: 10px;
-  width: 410px;
-  position: relative;
-  top: 50px;
+button .bi {
+  font-size: 30px;
 }
 
 /* CLASS */
@@ -58,6 +51,15 @@ button {
   color: rgb(131, 131, 131);
 }
 
+.returnToLoginButton button {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .displayForm-register {
   position: absolute;
   top: 57.5%;
@@ -66,7 +68,16 @@ button {
 } /* display form */
 
 /* ID */
-/*registro*/
+#backStep, #nextStep {
+  margin: 0;
+  padding: 15px;
+  border: 0;
+  border-radius: 10px;
+  width: 410px;
+  position: relative;
+  top: 50px;
+} 
+
 #nextStep {
   color: black;
   background-color: rgb(34, 193, 193);
@@ -81,3 +92,5 @@ button {
   50% {opacity: 0.7;}
   100% {opacity: 0.7;}
 }
+
+
