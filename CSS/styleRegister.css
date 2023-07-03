@@ -84,8 +84,11 @@ button .bi {
   transform: translate(-50%, -50%);
 } /* display form */
 
-/* ID */
-#backStep, #nextStep {
+.second-table-register {
+  display: none;
+}
+
+.button-table-register button {
   margin: 0;
   padding: 15px;
   border: 0;
@@ -95,9 +98,12 @@ button .bi {
   top: 50px;
 } 
 
-#nextStep {
+/* ID */
+#nextStep,
+#signIn {
   color: black;
   background-color: rgb(34, 193, 193);
+  cursor: pointer;
 }
 
 #nextStep:hover {
@@ -108,3 +114,13 @@ button .bi {
   50% {opacity: 0.7;}
   100% {opacity: 0.7;}
 } /* blinking next step button */
+
+#signIn {
+  position: relative;
+  top: 27px;
+  display: none;
+}
+
+#backStep {
+  cursor: not-allowed;
+}
