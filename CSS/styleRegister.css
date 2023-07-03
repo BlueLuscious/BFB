@@ -59,12 +59,12 @@ button .bi {
   cursor: pointer;
 }
 
-.return-login-button .pop-up-text-return-login {
+.return-login-button .return-login-pop-up-text {
   margin: 0px;
   padding: 10px;
   width: 120px;
   position: absolute;
-  top: 15%;
+  top: 14%;
   left: 27.5%;
   border-radius: 6px;
   opacity: 0;
@@ -73,7 +73,7 @@ button .bi {
   text-align: center;
   color: white;
   background-color: black;
-} /* show popup password */
+} /* popup return login */
 
 .form-register {
   position: absolute;
