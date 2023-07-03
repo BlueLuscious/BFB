@@ -85,7 +85,8 @@ button .bi {
 } /* display main image */
 
 /* ID */
-#logInButton, #signUpButton {
+#logInButton,
+#signUpButton {
     margin: 0;
     padding: 15px;
     width: 410px;
@@ -94,7 +95,8 @@ button .bi {
     cursor: pointer;
 } /* buttons */
 
-#logInButton:hover, #signUpButton:hover {
+#logInButton:hover,
+#signUpButton:hover {
     animation: blink-hover 1s infinite;
 } 
 @keyframes blink-hover {
