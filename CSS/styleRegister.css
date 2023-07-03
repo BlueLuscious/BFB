@@ -9,7 +9,6 @@ td {
   padding-bottom: 20px;
 }
 
- /*entrada de datos*/
 input {
   margin: 0px;
   padding: 15px;
@@ -18,33 +17,32 @@ input {
   transition: outline-color 0,3s;
   border-radius: 10px;
   background-color: rgb(246, 246, 246);
-}
+} /* data inputs */
 
-/*borde parapadeante para entrada de datos*/
 input:hover {
   border-color: rgb(210, 210, 210);
-}
+} /* data inputs blinking border */
 
 button .bi {
   font-size: 30px;
 }
 
 /* CLASS */
-.mainTitle {
+.main-title-register {
   position: absolute;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.newCreateTitle {
+.new-profile-title {
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.enterDataTitle {
+.enter-data-title {
   position: absolute;
   top: 25%;
   left: 50%;
