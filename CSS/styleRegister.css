@@ -98,7 +98,6 @@ button .bi {
   background-color: rgb(34, 193, 193);
 }
 
-/*parpadeo para boton next*/
 #nextStep:hover {
   animation: blink-hover 1s infinite;
 }
@@ -106,6 +105,4 @@ button .bi {
   0% {opacity: 0.7;}
   50% {opacity: 0.7;}
   100% {opacity: 0.7;}
-}
-
-
+} /* blinking next step button */
