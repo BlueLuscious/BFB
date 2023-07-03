@@ -84,13 +84,13 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
     // BACK
-/*     // validar formulario
-    logInButton.addEventListener('click', function (event) {
+    // validar formulario
+    signIn.addEventListener('click', function (event) {
         event.preventDefault()
 
 
 
-         let password = passwordInput.value
+        const password = passwordInput.value
         if (password.length < 6 || password.length > 12) {
             alert('La contraseña debe tener entre 6 y 12 caracteres.');
             return;
@@ -110,7 +110,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
         // agregar otras validaciones
 
-        document.getElementById('sugnUpForm').submit();
-    }) */
+        document.getElementById('signUpForm').submit();
+    })
 
 })
