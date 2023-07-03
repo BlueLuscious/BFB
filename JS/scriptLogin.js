@@ -22,15 +22,15 @@ window.addEventListener('DOMContentLoaded', function () {
             } else if (index == 1) {
                 passwordInput.value = ''
             }
-        })
+        }) // change input's value to blank
         input.addEventListener('focus', function () {
             if (index == 0) {
                 this.style.outlineColor = 'rgb(29, 186, 186)'
             } else if (index == 1) {
                 this.style.outlineColor = 'rgb(29, 186, 186)'
             }
-        })
-    }) // change input's outline color
+        }) // change input's outline color
+    }) 
 
     showPasswordButton.addEventListener('click', function () {
         if (passwordInput.type === 'password') {
