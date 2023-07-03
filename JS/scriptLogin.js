@@ -45,12 +45,12 @@ window.addEventListener('DOMContentLoaded', function () {
     showPasswordButton.addEventListener('mouseover', function () {
         popUpText.style.visibility = 'visible'
         popUpText.style.opacity = 1
-    }) // show popup by mouseover
+    }) // show show/hide-password popup by mouseover
 
     showPasswordButton.addEventListener('mouseout', function () {
         popUpText.style.visibility = 'hidden'
         popUpText.style.opacity = 0
-    }) // hide popup by mouseout
+    }) // hide show/hide password popup by mouseout
 
     showPasswordButton.addEventListener('click', function () {
         popUpText.style.visibility = 'hidden'
@@ -58,7 +58,7 @@ window.addEventListener('DOMContentLoaded', function () {
         clickCount++
         let contentIndex = clickCount % contentPopUpText.length
         popUpText.innerHTML = contentPopUpText[contentIndex]
-    }) // hide popup by click
+    }) // hide show/hide-password popup by click
 
     // BACK
     // mediante logInButton validar si los datos existen en el servidor
