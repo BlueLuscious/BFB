@@ -83,11 +83,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-
-
-
     // BACK
 /*     // validar formulario
     logInButton.addEventListener('click', function (event) {
