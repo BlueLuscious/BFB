@@ -54,7 +54,7 @@ button .bi {
 
 .show-password-button-login button {
     position: absolute;
-    top: 164px;
+    top: 154px;
     left: 380px;
     background: none;
     border: none;
@@ -66,7 +66,7 @@ button .bi {
     padding: 10px;
     width: 120px;
     position: absolute;
-    top: 159px;
+    top: 149px;
     left: 440px;
     border-radius: 6px;
     opacity: 0;
