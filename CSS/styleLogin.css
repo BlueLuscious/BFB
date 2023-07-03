@@ -92,7 +92,7 @@ button .bi {
     border: 0;
     border-radius: 10px;
     cursor: pointer;
-} /* button */
+} /* buttons */
 
 #logInButton:hover, #signUpButton:hover {
     animation: blink-hover 1s infinite;
