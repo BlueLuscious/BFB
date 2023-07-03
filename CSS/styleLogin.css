@@ -101,14 +101,14 @@ button .bi {
     0% {opacity: 0.3;}
     50% {opacity: 0.3;}
     100% {opacity: 0.3;}
-} /* blinking bottons */
+} /* blinking buttons */
 
 #logInButton {
     color: black;
     background-color: rgb(29, 186, 186);
-} /* log in */
+}
 
 #signUpButton {
     color: white;
     background-color: black;
-} /* sign up */
+}
