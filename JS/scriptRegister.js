@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     returnToLogin.addEventListener('click' , function () {
         window.location.href = 'login.html'
-    }) // return login-button redirects to login.
+    }) // return login-button redirects to login.html
 
     returnToLogin.addEventListener('mouseover', function () {
         popUpText.style.visibility = 'visible'
