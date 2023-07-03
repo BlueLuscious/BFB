@@ -52,7 +52,7 @@ button .bi {
   color: rgb(131, 131, 131);
 }
 
-.returnToLoginButton button {
+.return-login-button button {
   position: absolute;
   top: 20%;
   left: 30%;
@@ -61,7 +61,7 @@ button .bi {
   cursor: pointer;
 }
 
-.displayForm-register {
+.form-register {
   position: absolute;
   top: 57.5%;
   left: 50%;
