@@ -29,29 +29,29 @@ button .bi {
 } /* eye icon */
 
 /* CLASS */
-.mainTitle h1 {
+.main-title h1 {
     position: absolute;
     top: 75px;
     left: 100px;
 } /* display main title */
 
-.greetAndMeet h2 {
+.greet-and-meet h2 {
     position: absolute;
     top: 250px;
     left: 200px;
 } /* display greeting */
 
-.displayForm {
+.display-form-login {
     position: absolute;
     top: 350px;
     left: 200px;
 } /* display form */
 
-.displayPassword {
+.display-password-login {
     padding-top: 20px;
 } 
 
-.displayPopUp button {
+.display-popup-login button {
     position: absolute;
     top: 164px;
     left: 380px;
@@ -60,7 +60,7 @@ button .bi {
     cursor: pointer;
 } /* show/hide password button */
 
-.displayPopUp .popUpText {
+.display-popup-login .popUpText {
     margin: 0px;
     padding: 10px;
     width: 120px;
@@ -76,7 +76,7 @@ button .bi {
     background-color: black;
 } /* show popup password */
 
-.mainImage img {
+.background-image-login img {
     width: 1100px;
     height: 1100px;
     position: fixed;
