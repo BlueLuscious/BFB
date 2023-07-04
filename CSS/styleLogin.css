@@ -93,7 +93,7 @@ button .bi {
 } /* display main image */
 
 /* ID */
-#logInButton,
+#loginButton,
 #signUpButton {
     margin: 0;
     padding: 15px;
@@ -103,7 +103,7 @@ button .bi {
     cursor: pointer;
 } /* buttons */
 
-#logInButton:hover,
+#loginButton:hover,
 #signUpButton:hover {
     animation: blink-hover 1s infinite;
 } 
@@ -113,7 +113,7 @@ button .bi {
     100% {opacity: 0.3;}
 } /* blinking buttons */
 
-#logInButton {
+#loginButton {
     color: black;
     background-color: rgb(29, 186, 186);
 }
