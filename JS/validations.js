@@ -78,4 +78,19 @@ export class Validations {
         }
     } // validate password function
 
+    validateRepeatPassword(repeatPasswordInput) {
+        if (repeatPasswordInput.value == '') {
+            warningRepeatPasswordRegister.innerHTML = 'The repeated password is empty'
+            repeatPasswordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
+        } else if (repeatPasswordInput.value != passwordInput.value) {
+            warningRepeatPasswordRegister.innerHTML = 'The passwords do not match'
+            repeatPasswordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
+        } else if (repeatPasswordInput.value == passwordInput.value) {
+            passwordInput.style.borderInlineColor = 'rgb(195, 20, 20)'
+        
+        }
+    } // validate repeated password function
+
 }
