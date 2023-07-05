@@ -1,7 +1,4 @@
-import { Validations } from './validations'
-
 window.addEventListener('DOMContentLoaded', function () {
-    const validator = new Validations()
 
     const emailInput = document.getElementById('emailInput')
     const firstNameInput = document.getElementById('firstNameInput')
@@ -90,26 +87,6 @@ window.addEventListener('DOMContentLoaded', function () {
     }) // back step button
 
     // BACK
-
-
-
-
-    nextStepButton.addEventListener('click', function () {
-        validator.validateEmail(emailInput.value)
-        validator.validateFirstName(firstNameInput.value)
-        validator.validateLastName(lastNameInput.value)
-    })
-
-    signInButton.addEventListener('click', function (event) {
-        event.preventDefault()
-
-        validator.validateUsername(usernameInput.value)
-        validator.validatePassword(passwordInput.value)
-        validator.validateRepeatPassword(repeatPasswordInput.value, passwordInput.value)
-
-        signUpForm.submit()
-    })
-
 
 /*     const warningEmailRegister = document.getElementById('warningEmailRegister')
     const warningFirstNameRegister = document.getElementById('warningFirstNameRegister')
