@@ -108,7 +108,6 @@ window.addEventListener('DOMContentLoaded', function () {
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
         }
 
-        
 /*         async function validateEmail() {
             const apiKey = 'a59233b7b92243fa8549ee955b5625ed'
             $.getJSON(`https://api.zerobounce.net/v2/validate?api_key=${apiKey}&email=${emailInput.value}`)
