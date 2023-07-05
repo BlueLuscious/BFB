@@ -1,5 +1,4 @@
 export class Validations {
-
     validateEmail(emailInput) {
         if (emailInput.value == '') {
             warningEmailRegister.innerHTML = 'The email is empty'
@@ -77,5 +76,4 @@ export class Validations {
             return
         }
     } // validate repeated password function
-
 }
