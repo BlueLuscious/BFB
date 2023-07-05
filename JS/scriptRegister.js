@@ -11,12 +11,12 @@ window.addEventListener('DOMContentLoaded', function () {
     const popUpText = document.getElementById('popUpText')
     const firstPartForm = document.getElementById('firstPartForm')
     const secondPartForm = document.getElementById('secondPartForm')
-    const backStep = document.getElementById('backStep')
-    const nextStep = document.getElementById('nextStep')
-    const signIn = document.getElementById('signIn')
+    const backStepButtton = document.getElementById('backStep')
+    const nextStepButton = document.getElementById('nextStep')
+    const signInButton = document.getElementById('signIn')
 
     // FRONT
-    inputs.forEach(function(input, index) {
+    inputs.forEach(function (input, index) {
         input.addEventListener('click', function () {
             if (index == 0) {
                 this.value = ''
@@ -31,8 +31,8 @@ window.addEventListener('DOMContentLoaded', function () {
             } else if (index == 5) {
                 this.value = ''
             }
-       }) // change input's value to blank
-       input.addEventListener('focus', function () {
+        }) // change input's value to blank
+        input.addEventListener('focus', function () {
             if (index == 0) {
                 this.style.outlineColor = 'rgb(29, 186, 186)'
             } else if (index == 1) {
@@ -46,10 +46,10 @@ window.addEventListener('DOMContentLoaded', function () {
             } else if (index == 5) {
                 this.style.outlineColor = 'rgb(29, 186, 186)'
             }
-       }) // change input's outline color
+        }) // change input's outline color
     })
 
-    returnToLogin.addEventListener('click' , function () {
+    returnToLogin.addEventListener('click', function () {
         window.location.href = 'login.html'
     }) // return login-button redirects to login.html
 
@@ -63,29 +63,48 @@ window.addEventListener('DOMContentLoaded', function () {
         popUpText.style.opacity = 0
     }) // hide return-login popup by mouseout
 
-    nextStep.addEventListener('click', function () {
+    backStepButtton.addEventListener('click', function () {
+        firstPartForm.style.display = 'block'
+        secondPartForm.style.display = 'none'
+        nextStepButton.style.display = 'block'
+        signInButton.style.display = 'none'
+        this.disabled = true
+        this.style.cursor = 'not-allowed'
+    }) // back step button
+
+/*     nextStepButton.addEventListener('click', function () {
         firstPartForm.style.display = 'none'
         secondPartForm.style.display = 'block'
         this.style.display = 'none'
         signIn.style.display = 'block'
         backStep.disabled = false
         backStep.style.cursor = 'pointer'
-    }) // next step button
-
-    backStep.addEventListener('click', function () {
-        firstPartForm.style.display = 'block'
-        secondPartForm.style.display = 'none'
-        nextStep.style.display = 'block'
-        signIn.style.display = 'none'
-        this.disabled = true
-        this.style.cursor = 'not-allowed'
-    }) // back step button
+    }) */ // next step button
 
 
 
     // BACK
+
+    // import Validations from './validations'
+
+    const warningEmailRegister = document.getElementById('warningEmailRegister')
+    const warningFirstNameRegister = document.getElementById('warningFirstNameRegister')
+    const warningLastNameRegister = document.getElementById('warningLastNameRegister')
+    const warningUsernameRegister = document.getElementById('warningUsernameRegister')
+    const warningPasswordRegister = document.getElementById('warningPasswordRegister')
+    const warningRepeatPasswordRegister = document.getElementById('warningRepeatPasswordRegister')
+
+    nextStepButton.addEventListener('click', function () {
+        if (emailInput.value == '') {
+            warningEmailRegister.innerHTML = 'Empty email'
+        } 
+
+
+    })
+
+
     // validar formulario
-    signIn.addEventListener('click', function (event) {
+    signInButton.addEventListener('click', function (event) {
         event.preventDefault()
 
 
