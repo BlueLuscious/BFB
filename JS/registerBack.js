@@ -17,9 +17,7 @@ nextStepButton.addEventListener('click', function () {
     validator.validateLastName(lastNameInput)
 }) // validate form's first part
 
-signInButton.addEventListener('click', function (event) {
-    event.preventDefault()
-
+signInButton.addEventListener('click', function () {
     validator.validateUsername(usernameInput)
     validator.validatePassword(passwordInput)
     validator.validateRepeatPassword(repeatPasswordInput, passwordInput)
