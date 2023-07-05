@@ -1,4 +1,5 @@
-import { Validations } from './module/validations'
+import { Validations } from './module/validations.js'
+const validator = new Validations()
 
 const emailInput = document.getElementById('emailInput')
 const firstNameInput = document.getElementById('firstNameInput')
@@ -10,8 +11,6 @@ const repeatPasswordInput = document.getElementById('repeatPasswordInput')
 const nextStepButton = document.getElementById('nextStep')
 const signInButton = document.getElementById('signIn')
 const signUpForm = document.getElementById('signUpForm')
-
-const validator = new Validations()
 
 nextStepButton.addEventListener('click', function () {
     validator.validateEmail(emailInput)
