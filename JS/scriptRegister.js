@@ -109,10 +109,10 @@ window.addEventListener('DOMContentLoaded', function () {
             return
         }
 
-/*         async function validateEmail() {
+        async function validateEmail() {
             const apiKey = 'a59233b7b92243fa8549ee955b5625ed'
             $.getJSON(`https://api.zerobounce.net/v2/validate?api_key=${apiKey}&email=${emailInput.value}`)
-        } */
+        }
 
         // validate email
 
@@ -152,13 +152,19 @@ window.addEventListener('DOMContentLoaded', function () {
             warningUsernameRegister.innerHTML = 'The password is empty'
             usernameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
-        } else if (!/^[A-Z]/.test(emailInput)) {
-            alert('debe empezar con mayuscula')
-        } else if (emailInput) {
-
-        }
-
-        // validate username
+        } else if (usernameInput.value.length < 10 || usernameInput.value.length > 20) {
+            warningUsernameRegister.innerHTML = 'The username must have between 10 to 20 characters'
+            usernameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return 
+        } else if (!/^[A-Z]/.test(usernameInput.value)) {
+            warningUsernameRegister.innerHTML = 'The username must start with a capital letter'
+            usernameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
+        } else if (!/^[A-Za-z0-9]*$/.test(usernameInput.value)) {
+            warningUsernameRegister.innerHTML = 'The username must not have a special character'
+            usernameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
+        } // validate username
 
         if (passwordInput.value == '') {
             warningPasswordRegister.innerHTML = 'The password is empty'
