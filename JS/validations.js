@@ -3,6 +3,7 @@ export class Validations {
         if (emailInput.value == '') {
             warningEmailRegister.innerHTML = 'The email is empty'
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
         }
     } // validate email function
 
@@ -10,9 +11,11 @@ export class Validations {
         if (firstNameInput.value == '') {
             warningFirstNameRegister.innerHTML = 'The first name empty'
             firstNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
         } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/.test(firstNameInput.value)) {
             warningFirstNameRegister.innerHTML = 'Invalid value, only letters'
             firstNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
         }
     } // validate firstname function
 
@@ -44,6 +47,7 @@ export class Validations {
         if (usernameInput.value == '') {
             warningUsernameRegister.innerHTML = 'The password is empty'
             usernameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
         }
     } // validate username function
 
@@ -51,6 +55,7 @@ export class Validations {
         if (passwordInput.value == '') {
             warningPasswordRegister.innerHTML = 'The password is empty'
             passwordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
         } else if (passwordInput.value.length < 6 || passwordInput.value.length > 12) {
             warningPasswordRegister.innerHTML = 'The Password must have between 6 to 12 characters'
             passwordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
@@ -70,14 +75,17 @@ export class Validations {
         }
     } // validate password function
 
-    validateRepeatPassword(repeatPasswordInput, passwordInput) {
+    validateRepeatPassword(repeatPasswordInput, passwordInput, event) {
+
         if (repeatPasswordInput.value == '') {
             warningRepeatPasswordRegister.innerHTML = 'The repeated password is empty'
             repeatPasswordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            event.preventDefault()
             return
         } else if (repeatPasswordInput.value != passwordInput.value) {
             warningRepeatPasswordRegister.innerHTML = 'The passwords do not match'
             repeatPasswordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            event.preventDefault()
             return
         }
     } // validate repeated password function
