@@ -16,7 +16,7 @@ nextStepButton.addEventListener('click', function () {
     validator.validateEmail(emailInput)
     validator.validateFirstName(firstNameInput)
     validator.validateLastName(lastNameInput)
-})
+}) // validate form's first part
 
 signInButton.addEventListener('click', function (event) {
     event.preventDefault()
@@ -26,4 +26,4 @@ signInButton.addEventListener('click', function (event) {
     validator.validateRepeatPassword(repeatPasswordInput, passwordInput)
 
     signUpForm.submit()
-})
+}) // validate form's second part & send register
