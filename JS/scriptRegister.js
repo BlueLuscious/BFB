@@ -1,3 +1,5 @@
+import { Validations } from './validations'
+
 window.addEventListener('DOMContentLoaded', function () {
 
     const emailInput = document.getElementById('emailInput')
@@ -21,24 +23,31 @@ window.addEventListener('DOMContentLoaded', function () {
         input.addEventListener('click', function () {
             if (index == 0) {
                 this.value = ''
+                this.style.borderBottomColor = ''
                 warningEmailRegister.innerHTML = ''
             } else if (index == 1) {
                 this.value = ''
+                this.style.borderBottomColor = ''
                 warningFirstNameRegister.innerHTML = ''
             } else if (index == 2) {
                 this.value = ''
+                this.style.borderBottomColor = ''
                 warningLastNameRegister.innerHTML = ''
             } else if (index == 3) {
                 this.value = ''
+                this.style.borderBottomColor = ''
                 warningUsernameRegister.innerHTML = ''
             } else if (index == 4) {
                 this.value = ''
+                this.style.borderBottomColor = ''
                 warningPasswordRegister.innerHTML = ''
             } else if (index == 5) {
                 this.value = ''
+                this.style.borderBottomColor = ''
                 warningRepeatPasswordRegister.innerHTML = ''
             }
-        }) // change input's value to blank
+        }) // change warning's content & input's value to blank
+
         input.addEventListener('focus', function () {
             if (index == 0) {
                 this.style.outlineColor = 'rgb(29, 186, 186)'
@@ -79,41 +88,38 @@ window.addEventListener('DOMContentLoaded', function () {
         this.style.cursor = 'not-allowed'
     }) // back step button
 
-/*     nextStepButton.addEventListener('click', function () {
-        firstPartForm.style.display = 'none'
-        secondPartForm.style.display = 'block'
-        this.style.display = 'none'
-        signIn.style.display = 'block'
-        backStep.disabled = false
-        backStep.style.cursor = 'pointer'
-    }) */ // next step button
-
-
-
     // BACK
-
-    // import Validations from './validations'
-
     const warningEmailRegister = document.getElementById('warningEmailRegister')
     const warningFirstNameRegister = document.getElementById('warningFirstNameRegister')
     const warningLastNameRegister = document.getElementById('warningLastNameRegister')
     const warningUsernameRegister = document.getElementById('warningUsernameRegister')
     const warningPasswordRegister = document.getElementById('warningPasswordRegister')
     const warningRepeatPasswordRegister = document.getElementById('warningRepeatPasswordRegister')
+    const validator = new Validations()
 
     nextStepButton.addEventListener('click', function () {
         if (emailInput.value == '') {
-            warningEmailRegister.innerHTML = 'Empty email'
+            warningEmailRegister.innerHTML = 'The email is empty'
+            emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
         }
+
+        // validate email
+
         if (firstNameInput.value == '') {
-            warningFirstNameRegister.innerHTML = 'Empty first name'
+            warningFirstNameRegister.innerHTML = 'The first name empty'
+            firstNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
         } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/.test(firstNameInput.value)) {
             warningFirstNameRegister.innerHTML = 'Invalid value, only letters'
-        }
+            firstNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+        } // validate first name
+
         if (lastNameInput.value == '') {
-            warningLastNameRegister.innerHTML = 'Empty last name'
+            warningLastNameRegister.innerHTML = 'The last name empty'
+            lastNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
         } else if (!/^([a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+\s)*[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/.test(lastNameInput.value)) {
             warningLastNameRegister.innerHTML = 'Invalid value, only letters'
+            lastNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
         } else {
                 firstPartForm.style.display = 'none'
@@ -122,34 +128,37 @@ window.addEventListener('DOMContentLoaded', function () {
                 signIn.style.display = 'block'
                 backStep.disabled = false
                 backStep.style.cursor = 'pointer'
-        }
-    })
+        } // validate last name & display form's second part
+    }) // validate form's first part
 
 
-    // validar formulario
     signInButton.addEventListener('click', function (event) {
         event.preventDefault()
 
-
-
-        const password = passwordInput.value
-        if (password.length < 6 || password.length > 12) {
-            alert('La contraseña debe tener entre 6 y 12 caracteres.');
-            return;
-        } else if (!/[A-Z]/.test(password)) {
-            alert('La contraseña debe contener al menos una letra mayúscula.');
-            return;
-        } else if (!/\d/.test(password)) {
-            alert('La contraseña debe contener al menos un dígito.');
-            return;
-        } else if (!/[^a-zA-Z0-9]/.test(password)) {
-            alert('La contraseña debe contener al menos un carácter especial.');
-            return;
+        if (usernameInput.value == '') {
+            warningUsernameRegister.innerHTML = 'The password is empty'
+            usernameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
         }
 
-        // agregar otras validaciones
+        // validate username
 
-        signUpForm.submit();
-    })
+
+        validator.validatePassword(passwordInput) // validate password
+
+        if (repeatPasswordInput.value == '') {
+            warningRepeatPasswordRegister.innerHTML = 'The repeated password is empty'
+            repeatPasswordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
+        } else if (repeatPasswordInput.value != passwordInput.value) {
+            warningRepeatPasswordRegister.innerHTML = 'The passwords do not match'
+            repeatPasswordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
+        } else if (repeatPasswordInput.value == passwordInput.value) {
+            passwordInput.style.borderInlineColor = 'rgb(195, 20, 20)'
+        
+        } // validate repeated password
+
+        signUpForm.submit()
+    }) // validate form's second part & send register
 
 })
