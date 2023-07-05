@@ -14,22 +14,29 @@ window.addEventListener('DOMContentLoaded', function () {
     const backStepButtton = document.getElementById('backStep')
     const nextStepButton = document.getElementById('nextStep')
     const signInButton = document.getElementById('signIn')
+    const signUpForm = document.getElementById('signUpForm')
 
     // FRONT
     inputs.forEach(function (input, index) {
         input.addEventListener('click', function () {
             if (index == 0) {
                 this.value = ''
+                warningEmailRegister.innerHTML = ''
             } else if (index == 1) {
                 this.value = ''
+                warningFirstNameRegister.innerHTML = ''
             } else if (index == 2) {
                 this.value = ''
+                warningLastNameRegister.innerHTML = ''
             } else if (index == 3) {
                 this.value = ''
+                warningUsernameRegister.innerHTML = ''
             } else if (index == 4) {
                 this.value = ''
+                warningPasswordRegister.innerHTML = ''
             } else if (index == 5) {
                 this.value = ''
+                warningRepeatPasswordRegister.innerHTML = ''
             }
         }) // change input's value to blank
         input.addEventListener('focus', function () {
@@ -97,14 +104,25 @@ window.addEventListener('DOMContentLoaded', function () {
     nextStepButton.addEventListener('click', function () {
         if (emailInput.value == '') {
             warningEmailRegister.innerHTML = 'Empty email'
-        } else if (emailInput.value == '') {
-            warningEmailRegister.innerHTML = 'Empty email'
-        } else if (emailInput.value == '') {
-            warningEmailRegister.innerHTML = 'Empty email'
-            return
         }
-
-
+        if (firstNameInput.value == '') {
+            warningFirstNameRegister.innerHTML = 'Empty first name'
+        } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/.test(firstNameInput.value)) {
+            warningFirstNameRegister.innerHTML = 'Invalid value, only letters'
+        }
+        if (lastNameInput.value == '') {
+            warningLastNameRegister.innerHTML = 'Empty last name'
+        } else if (!/^([a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+\s)*[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/.test(lastNameInput.value)) {
+            warningLastNameRegister.innerHTML = 'Invalid value, only letters'
+            return
+        } else {
+                firstPartForm.style.display = 'none'
+                secondPartForm.style.display = 'block'
+                this.style.display = 'none'
+                signIn.style.display = 'block'
+                backStep.disabled = false
+                backStep.style.cursor = 'pointer'
+        }
     })
 
 
@@ -118,23 +136,20 @@ window.addEventListener('DOMContentLoaded', function () {
         if (password.length < 6 || password.length > 12) {
             alert('La contraseña debe tener entre 6 y 12 caracteres.');
             return;
-        }
-        if (!/[A-Z]/.test(password)) {
+        } else if (!/[A-Z]/.test(password)) {
             alert('La contraseña debe contener al menos una letra mayúscula.');
             return;
-        }
-        if (!/\d/.test(password)) {
+        } else if (!/\d/.test(password)) {
             alert('La contraseña debe contener al menos un dígito.');
             return;
-        }
-        if (!/[^a-zA-Z0-9]/.test(password)) {
+        } else if (!/[^a-zA-Z0-9]/.test(password)) {
             alert('La contraseña debe contener al menos un carácter especial.');
             return;
         }
 
         // agregar otras validaciones
 
-        document.getElementById('signUpForm').submit();
+        signUpForm.submit();
     })
 
 })
