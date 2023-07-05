@@ -30,7 +30,6 @@ window.addEventListener('DOMContentLoaded', function () {
     const warningPasswordRegister = document.getElementById('warningPasswordRegister')
     const warningRepeatPasswordRegister = document.getElementById('warningRepeatPasswordRegister')
 
-    // FRONT
     inputs.forEach(function (input, index) {
         input.addEventListener('click', function () {
             if (index == 0) {
