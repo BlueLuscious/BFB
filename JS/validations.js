@@ -5,7 +5,7 @@ export class Validations {
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
         }
     } // validate email function
-
+    
     validateFirstName(firstNameInput) {
         if (firstNameInput.value == '') {
             warningFirstNameRegister.innerHTML = 'The first name empty'
