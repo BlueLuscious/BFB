@@ -106,6 +106,7 @@ window.addEventListener('DOMContentLoaded', function () {
         if (emailInput.value == '') {
             warningEmailRegister.innerHTML = 'The email is empty'
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
         }
 
 /*         async function validateEmail() {
@@ -118,9 +119,11 @@ window.addEventListener('DOMContentLoaded', function () {
         if (firstNameInput.value == '') {
             warningFirstNameRegister.innerHTML = 'The first name empty'
             firstNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
         } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/.test(firstNameInput.value)) {
             warningFirstNameRegister.innerHTML = 'Invalid value, only letters'
             firstNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
         } // validate first name
 
         if (lastNameInput.value == '') {
@@ -148,6 +151,11 @@ window.addEventListener('DOMContentLoaded', function () {
         if (usernameInput.value == '') {
             warningUsernameRegister.innerHTML = 'The password is empty'
             usernameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
+        } else if (!/^[A-Z]/.test(emailInput)) {
+            alert('debe empezar con mayuscula')
+        } else if (emailInput) {
+
         }
 
         // validate username
@@ -155,6 +163,7 @@ window.addEventListener('DOMContentLoaded', function () {
         if (passwordInput.value == '') {
             warningPasswordRegister.innerHTML = 'The password is empty'
             passwordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
         } else if (passwordInput.value.length < 6 || passwordInput.value.length > 12) {
             warningPasswordRegister.innerHTML = 'The Password must have between 6 to 12 characters'
             passwordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
