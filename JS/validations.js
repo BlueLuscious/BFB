@@ -1,13 +1,13 @@
 export class Validations {
 
-    validateEmail(emailInput) {
+    validateEmail(emailInput, warningEmailRegister) {
         if (emailInput.value == '') {
             warningEmailRegister.innerHTML = 'The email is empty'
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
         }
     } // validate email function
 
-    validateFirstName(firstNameInput) {
+    validateFirstName(firstNameInput, warningFirstNameRegister) {
         if (firstNameInput.value == '') {
             warningFirstNameRegister.innerHTML = 'The first name empty'
             firstNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
@@ -17,7 +17,7 @@ export class Validations {
         }
     } // validate firstname function
 
-    validateLastName(lastNameInput) {
+    validateLastName(lastNameInput, warningLastNameRegister) {
         if (lastNameInput.value == '') {
             warningLastNameRegister.innerHTML = 'The last name empty'
             lastNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
@@ -36,14 +36,14 @@ export class Validations {
         }
     } // // validate lastname function & display form's second part
 
-    validateUsername(usernameInput) {
+    validateUsername(usernameInput, warningUsernameRegister) {
         if (usernameInput.value == '') {
             warningUsernameRegister.innerHTML = 'The password is empty'
             usernameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
         }
     } // validate username function
 
-    validatePassword(passwordInput) {
+    validatePassword(passwordInput, warningPasswordRegister) {
         if (passwordInput.value == '') {
             warningPasswordRegister.innerHTML = 'The password is empty'
             passwordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
@@ -66,7 +66,7 @@ export class Validations {
         }
     } // validate password function
 
-    validateRepeatPassword(repeatPasswordInput) {
+    validateRepeatPassword(repeatPasswordInput, warningRepeatPasswordRegister) {
         if (repeatPasswordInput.value == '') {
             warningRepeatPasswordRegister.innerHTML = 'The repeated password is empty'
             repeatPasswordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
@@ -75,9 +75,6 @@ export class Validations {
             warningRepeatPasswordRegister.innerHTML = 'The passwords do not match'
             repeatPasswordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
-        } else if (repeatPasswordInput.value == passwordInput.value) {
-            passwordInput.style.borderInlineColor = 'rgb(195, 20, 20)'
-        
         }
     } // validate repeated password function
 
