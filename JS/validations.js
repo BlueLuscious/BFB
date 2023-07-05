@@ -5,7 +5,7 @@ export class Validations {
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
         }
     } // validate email function
-    
+
     validateFirstName(firstNameInput) {
         if (firstNameInput.value == '') {
             warningFirstNameRegister.innerHTML = 'The first name empty'
@@ -17,6 +17,11 @@ export class Validations {
     } // validate firstname function
 
     validateLastName(lastNameInput) {
+        const firstPartForm = document.getElementById('firstPartForm')
+        const secondPartForm = document.getElementById('secondPartForm')
+        const backStepButtton = document.getElementById('backStep')
+        const nextStepButton = document.getElementById('nextStep')
+        const signInButton = document.getElementById('signIn')
         if (lastNameInput.value == '') {
             warningLastNameRegister.innerHTML = 'The last name empty'
             lastNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
