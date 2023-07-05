@@ -1,5 +1,3 @@
-import Validations from './validations'
-
 window.addEventListener('DOMContentLoaded', function () {
 
     const emailInput = document.getElementById('emailInput')
@@ -89,13 +87,14 @@ window.addEventListener('DOMContentLoaded', function () {
     }) // back step button
 
     // BACK
+    // import Validations from './validations'
+
     const warningEmailRegister = document.getElementById('warningEmailRegister')
     const warningFirstNameRegister = document.getElementById('warningFirstNameRegister')
     const warningLastNameRegister = document.getElementById('warningLastNameRegister')
     const warningUsernameRegister = document.getElementById('warningUsernameRegister')
     const warningPasswordRegister = document.getElementById('warningPasswordRegister')
     const warningRepeatPasswordRegister = document.getElementById('warningRepeatPasswordRegister')
-    const validator = new Validations()
 
     nextStepButton.addEventListener('click', function () {
         if (emailInput.value == '') {
@@ -142,8 +141,26 @@ window.addEventListener('DOMContentLoaded', function () {
 
         // validate username
 
-
-        validator.validatePassword(passwordInput) // validate password
+        if (passwordInput.value == '') {
+            warningPasswordRegister.innerHTML = 'The password is empty'
+            passwordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+        } else if (passwordInput.value.length < 6 || passwordInput.value.length > 12) {
+            warningPasswordRegister.innerHTML = 'The Password must have between 6 to 12 characters'
+            passwordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
+        } else if (!/[A-Z]/.test(passwordInput.value)) {
+            warningPasswordRegister.innerHTML = 'The password must have at least one capital letter'
+            passwordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
+        } else if (!/\d/.test(passwordInput.value)) {
+            warningPasswordRegister.innerHTML = 'The password must have at least one number'
+            passwordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
+        } else if (!/[^a-zA-Z0-9]/.test(passwordInput.value)) {
+            warningPasswordRegister.innerHTML = 'The password must have at least one special character'
+            passwordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
+        } // validate password
 
         if (repeatPasswordInput.value == '') {
             warningRepeatPasswordRegister.innerHTML = 'The repeated password is empty'
