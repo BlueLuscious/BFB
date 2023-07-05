@@ -76,7 +76,6 @@ export class Validations {
     } // validate password function
 
     validateRepeatPassword(repeatPasswordInput, passwordInput, event) {
-
         if (repeatPasswordInput.value == '') {
             warningRepeatPasswordRegister.innerHTML = 'The repeated password is empty'
             repeatPasswordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
