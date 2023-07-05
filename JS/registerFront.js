@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
 
+    // inputs
     const emailInput = document.getElementById('emailInput')
     const firstNameInput = document.getElementById('firstNameInput')
     const lastNameInput = document.getElementById('lastNameInput')
@@ -7,13 +8,27 @@ window.addEventListener('DOMContentLoaded', function () {
     const passwordInput = document.getElementById('passwordInput')
     const repeatPasswordInput = document.getElementById('repeatPasswordInput')
     const inputs = [emailInput, firstNameInput, lastNameInput, usernameInput, passwordInput, repeatPasswordInput]
+
+    // pop-up
     const returnToLogin = document.getElementById('returnToLogin')
     const popUpText = document.getElementById('popUpText')
+
+    // form parts
     const firstPartForm = document.getElementById('firstPartForm')
     const secondPartForm = document.getElementById('secondPartForm')
+
+    // buttons
     const backStepButtton = document.getElementById('backStep')
     const nextStepButton = document.getElementById('nextStep')
     const signInButton = document.getElementById('signIn')
+
+    // warnings
+    const warningEmailRegister = document.getElementById('warningEmailRegister')
+    const warningFirstNameRegister = document.getElementById('warningFirstNameRegister')
+    const warningLastNameRegister = document.getElementById('warningLastNameRegister')
+    const warningUsernameRegister = document.getElementById('warningUsernameRegister')
+    const warningPasswordRegister = document.getElementById('warningPasswordRegister')
+    const warningRepeatPasswordRegister = document.getElementById('warningRepeatPasswordRegister')
 
     // FRONT
     inputs.forEach(function (input, index) {
