@@ -1,4 +1,5 @@
 import { Validations } from './validations'
+
 window.addEventListener('DOMContentLoaded', function () {
     const validator = new Validations()
 
