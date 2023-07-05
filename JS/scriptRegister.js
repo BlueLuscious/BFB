@@ -176,9 +176,6 @@ window.addEventListener('DOMContentLoaded', function () {
             warningRepeatPasswordRegister.innerHTML = 'The passwords do not match'
             repeatPasswordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
-        } else if (repeatPasswordInput.value == passwordInput.value) {
-            passwordInput.style.borderInlineColor = 'rgb(195, 20, 20)'
-        
         } // validate repeated password
 
         signUpForm.submit()
