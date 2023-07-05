@@ -107,6 +107,7 @@ window.addEventListener('DOMContentLoaded', function () {
             warningEmailRegister.innerHTML = 'The email is empty'
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
+
         }
 
         async function validateEmail() {
@@ -149,7 +150,7 @@ window.addEventListener('DOMContentLoaded', function () {
         event.preventDefault()
 
         if (usernameInput.value == '') {
-            warningUsernameRegister.innerHTML = 'The password is empty'
+            warningUsernameRegister.innerHTML = 'The username is empty'
             usernameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
         } else if (usernameInput.value.length < 10 || usernameInput.value.length > 20) {
