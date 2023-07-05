@@ -39,14 +39,14 @@ button .bi {
 
 .new-profile-title {
   position: absolute;
-  top: 22%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .enter-data-title {
   position: absolute;
-  top: 28%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(131, 131, 131);
@@ -54,7 +54,7 @@ button .bi {
 
 .return-login-button button {
   position: absolute;
-  top: 20%;
+  top: 18%;
   left: 30%;
   background: none;
   border: none;
@@ -79,7 +79,7 @@ button .bi {
 
 .form-register {
   position: absolute;
-  top: 60%;
+  top: 62.5%;
   left: 50%;
   transform: translate(-50%, -50%);
 } /* display form */
@@ -95,8 +95,14 @@ button .bi {
   border-radius: 10px;
   width: 410px;
   position: relative;
-  top: 50px;
-} 
+  top: 10px;
+}
+
+.warnings {
+  margin-bottom: 20px;
+  height: 15px;
+  border: 1px solid black;
+}
 
 /* ID */
 #nextStep,
@@ -117,7 +123,7 @@ button .bi {
 
 #signIn {
   position: relative;
-  top: 27px;
+  top: -13px;
   display: none;
 }
 
