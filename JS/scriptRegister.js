@@ -1,4 +1,4 @@
-import { Validations } from './validations'
+import Validations from './validations'
 
 window.addEventListener('DOMContentLoaded', function () {
 
