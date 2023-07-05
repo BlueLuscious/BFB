@@ -45,7 +45,7 @@ export class Validations {
 
     validateUsername(usernameInput) {
         if (usernameInput.value == '') {
-            warningUsernameRegister.innerHTML = 'The password is empty'
+            warningUsernameRegister.innerHTML = 'The username is empty'
             usernameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
         } else if (usernameInput.value.length < 10 || usernameInput.value.length > 20) {
