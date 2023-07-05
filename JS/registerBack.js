@@ -33,7 +33,3 @@ signInButton.addEventListener('click', function () {
 
     signUpForm.submit()
 })
-
-
-
-
