@@ -124,9 +124,9 @@ window.addEventListener('DOMContentLoaded', function () {
                 firstPartForm.style.display = 'none'
                 secondPartForm.style.display = 'block'
                 this.style.display = 'none'
-                signIn.style.display = 'block'
-                backStep.disabled = false
-                backStep.style.cursor = 'pointer'
+                signInButton.style.display = 'block'
+                backStepButtton.disabled = false
+                backStepButtton.style.cursor = 'pointer'
         } // validate last name & display form's second part
     }) // validate form's first part
 
