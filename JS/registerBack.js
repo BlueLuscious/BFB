@@ -7,7 +7,6 @@ const lastNameInput = document.getElementById('lastNameInput')
 const usernameInput = document.getElementById('usernameInput')
 const passwordInput = document.getElementById('passwordInput')
 const repeatPasswordInput = document.getElementById('repeatPasswordInput')
-
 const nextStepButton = document.getElementById('nextStep')
 const signInButton = document.getElementById('signIn')
 const signUpForm = document.getElementById('signUpForm')
