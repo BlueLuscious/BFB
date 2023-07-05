@@ -97,7 +97,12 @@ window.addEventListener('DOMContentLoaded', function () {
     nextStepButton.addEventListener('click', function () {
         if (emailInput.value == '') {
             warningEmailRegister.innerHTML = 'Empty email'
-        } 
+        } else if (emailInput.value == '') {
+            warningEmailRegister.innerHTML = 'Empty email'
+        } else if (emailInput.value == '') {
+            warningEmailRegister.innerHTML = 'Empty email'
+            return
+        }
 
 
     })
