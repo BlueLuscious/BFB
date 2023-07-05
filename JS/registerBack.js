@@ -1,4 +1,4 @@
-import { Validations } from './validations.js'
+import { Validations } from './module/validations'
 
 const emailInput = document.getElementById('emailInput')
 const firstNameInput = document.getElementById('firstNameInput')
