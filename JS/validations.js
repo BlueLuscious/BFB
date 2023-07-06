@@ -4,6 +4,10 @@ export class Validations {
             warningEmailRegister.innerHTML = 'The email is empty'
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
+        } else if (!/^[a-z0-9@.]+$/.test(emailInput.value)) {
+            warningEmailRegister.innerHTML = 'The email must have lowercase letters and numbers'
+            emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
         } else if (emailInput) {
             const domains = ['@gmail.com', '@yahoo.com', '@outlook.com']
             let isValid = false
