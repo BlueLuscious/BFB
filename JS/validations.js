@@ -4,7 +4,22 @@ export class Validations {
             warningEmailRegister.innerHTML = 'The email is empty'
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
-        } 
+        } else if (emailInput.value) {
+            const domains = ['@gmail.com', '@yahoo.com', '@outlook.com']
+            let isValid = false
+
+            domains.forEach(function (domain) {
+                if (emailInput.value.endsWith(domain)) {
+                    isValid = true
+                }
+            })
+
+            if (!isValid) {
+                warningEmailRegister.innerHTML = 'The email is invalid'
+                emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+                return
+            }
+        }
     } // validate email function
 
     validateFirstName(firstNameInput) {
