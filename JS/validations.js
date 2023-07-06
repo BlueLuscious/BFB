@@ -1,10 +1,12 @@
+import validator from "validator"
+
 export class Validations {
     validateEmail(emailInput) {
         if (emailInput.value == '') {
             warningEmailRegister.innerHTML = 'The email is empty'
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
-        }
+        } 
     } // validate email function
 
     validateFirstName(firstNameInput) {
