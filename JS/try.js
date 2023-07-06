@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded', function () {
     const emailInput = document.getElementById('emailInput')
 
     validEmail.addEventListener('click', function () {
-
             if (validator.isEmail(emailInput.value)) {
                 document.getElementById('result').textContent = 'Email is valid';
             } else {
@@ -15,6 +14,3 @@ window.addEventListener('DOMContentLoaded', function () {
     })
 
 })
-
-
-
