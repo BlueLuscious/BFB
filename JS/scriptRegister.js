@@ -1,3 +1,5 @@
+import validator from 'validator'
+
 window.addEventListener('DOMContentLoaded', function () {
 
     // inputs
@@ -102,26 +104,40 @@ window.addEventListener('DOMContentLoaded', function () {
     }) // back step button
 
     // BACK
+
+
+
+
+
+
+
+
+
+
     nextStepButton.addEventListener('click', function () {
         if (emailInput.value == '') {
             warningEmailRegister.innerHTML = 'The email is empty'
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
-        } else {
-            const apiKey = 'a59233b7b92243fa8549ee955b5625ed'
-            $.getJSON(`https://api.zerobounce.net/v2/validate?api_key=${apiKey}&email=${emailInput.value}`, function (data) {
-                console.log(data)
-                console.log(data.status)
-                if (emailInput.value) {
-                    if (data.status != 'valid') {
-                        warningEmailRegister.innerHTML = 'The email is invalid'
-                        emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
-                    }
-                }
-
-            })
+        } else if (validator.isEmail(emailInput.value)) {
+            warningEmailRegister.innerHTML = 'The email is invalid'
+            emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
         }
 
+/*         async function checkStatus() {
+            const apiKey = '4859102a867fa3bf6cdf340f890b90cd-6d8d428c-df50f730'
+            $.getJSON(`https://api.mailgun.net/v3/address/validate?address=${emailInput.value}`, function (data) {
+                console.log(data)
+                //console.log(data.status)
+                if (data.status !== 'valid') {
+                    warningEmailRegister.innerHTML = 'The email is invalid'
+                    emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+                    return
+                }
+            })
+        }
+        checkStatus() */
 
         // validate email
 
@@ -152,6 +168,20 @@ window.addEventListener('DOMContentLoaded', function () {
             backStepButtton.style.cursor = 'pointer'
         } // validate last name & display form's second part
     }) // validate form's first part
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     signInButton.addEventListener('click', function (event) {
