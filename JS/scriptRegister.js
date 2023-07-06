@@ -1,5 +1,3 @@
-import validator from 'validator'
-
 window.addEventListener('DOMContentLoaded', function () {
 
     // inputs
@@ -104,26 +102,16 @@ window.addEventListener('DOMContentLoaded', function () {
     }) // back step button
 
     // BACK
-
-
-
-
-
-
-
-
-
-
     nextStepButton.addEventListener('click', function () {
         if (emailInput.value == '') {
             warningEmailRegister.innerHTML = 'The email is empty'
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
-        } else if (validator.isEmail(emailInput.value)) {
+        } /* else if (validator.isEmail(emailInput.value)) {
             warningEmailRegister.innerHTML = 'The email is invalid'
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
-        }
+        } */
 
 /*         async function checkStatus() {
             const apiKey = '4859102a867fa3bf6cdf340f890b90cd-6d8d428c-df50f730'
@@ -168,21 +156,6 @@ window.addEventListener('DOMContentLoaded', function () {
             backStepButtton.style.cursor = 'pointer'
         } // validate last name & display form's second part
     }) // validate form's first part
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     signInButton.addEventListener('click', function (event) {
         event.preventDefault()
