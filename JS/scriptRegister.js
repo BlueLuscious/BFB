@@ -107,25 +107,11 @@ window.addEventListener('DOMContentLoaded', function () {
             warningEmailRegister.innerHTML = 'The email is empty'
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
-        } /* else if (validator.isEmail(emailInput.value)) {
+        } else if (!emailInput.value.endsWith('@gmail.com')) {
             warningEmailRegister.innerHTML = 'The email is invalid'
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
-        } */
-
-/*         async function checkStatus() {
-            const apiKey = '4859102a867fa3bf6cdf340f890b90cd-6d8d428c-df50f730'
-            $.getJSON(`https://api.mailgun.net/v3/address/validate?address=${emailInput.value}`, function (data) {
-                console.log(data)
-                //console.log(data.status)
-                if (data.status !== 'valid') {
-                    warningEmailRegister.innerHTML = 'The email is invalid'
-                    emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
-                    return
-                }
-            })
         }
-        checkStatus() */
 
         // validate email
 
