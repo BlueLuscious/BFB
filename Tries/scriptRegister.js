@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const warningPasswordRegister = document.getElementById('warningPasswordRegister')
     const warningRepeatPasswordRegister = document.getElementById('warningRepeatPasswordRegister')
 
-    // FRONT
+    // FRONT (styles)
     inputs.forEach(function (input, index) {
         input.addEventListener('click', function () {
             if (index == 0) {
@@ -101,7 +101,7 @@ window.addEventListener('DOMContentLoaded', function () {
         this.style.cursor = 'not-allowed'
     }) // back step button
 
-    // BACK
+    // BACK (form validations)
     nextStepButton.addEventListener('click', function () {
         if (emailInput.value == '') {
             warningEmailRegister.innerHTML = 'The email is empty'
