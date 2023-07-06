@@ -107,6 +107,10 @@ window.addEventListener('DOMContentLoaded', function () {
             warningEmailRegister.innerHTML = 'The email is empty'
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
+        } else if (!/^[a-z0-9@.]*$/.test(emailInput.value)) {
+            warningEmailRegister.innerHTML = 'The email must have lowercase letters and numbers'
+            emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return
         } else if (emailInput) {
             const domains = ['@gmail.com', '@yahoo.com', '@outlook.com']
             let isValid = false
@@ -129,7 +133,7 @@ window.addEventListener('DOMContentLoaded', function () {
             firstNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
         } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/.test(firstNameInput.value)) {
-            warningFirstNameRegister.innerHTML = 'Invalid value, only letters'
+            warningFirstNameRegister.innerHTML = 'The first name must have only letters'
             firstNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
         } // validate first name
@@ -139,7 +143,7 @@ window.addEventListener('DOMContentLoaded', function () {
             lastNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
         } else if (!/^([a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+\s)*[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/.test(lastNameInput.value)) {
-            warningLastNameRegister.innerHTML = 'Invalid value, only letters'
+            warningLastNameRegister.innerHTML = 'The first name must have only letters'
             lastNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
         } else {
