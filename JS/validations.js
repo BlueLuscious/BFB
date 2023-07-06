@@ -101,10 +101,3 @@ export class Validations {
         }
     } // validate repeated password function
 }
-
-
-
-
-/* const domain = gmail
-
-if */
