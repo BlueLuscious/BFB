@@ -107,13 +107,21 @@ window.addEventListener('DOMContentLoaded', function () {
             warningEmailRegister.innerHTML = 'The email is empty'
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
-
-        }
-
-        async function validateEmail() {
+        } else {
             const apiKey = 'a59233b7b92243fa8549ee955b5625ed'
-            $.getJSON(`https://api.zerobounce.net/v2/validate?api_key=${apiKey}&email=${emailInput.value}`)
+            $.getJSON(`https://api.zerobounce.net/v2/validate?api_key=${apiKey}&email=${emailInput.value}`, function (data) {
+                console.log(data)
+                console.log(data.status)
+                if (emailInput.value) {
+                    if (data.status != 'valid') {
+                        warningEmailRegister.innerHTML = 'The email is invalid'
+                        emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+                    }
+                }
+
+            })
         }
+
 
         // validate email
 
@@ -136,12 +144,12 @@ window.addEventListener('DOMContentLoaded', function () {
             lastNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
         } else {
-                firstPartForm.style.display = 'none'
-                secondPartForm.style.display = 'block'
-                this.style.display = 'none'
-                signInButton.style.display = 'block'
-                backStepButtton.disabled = false
-                backStepButtton.style.cursor = 'pointer'
+            firstPartForm.style.display = 'none'
+            secondPartForm.style.display = 'block'
+            this.style.display = 'none'
+            signInButton.style.display = 'block'
+            backStepButtton.disabled = false
+            backStepButtton.style.cursor = 'pointer'
         } // validate last name & display form's second part
     }) // validate form's first part
 
@@ -156,7 +164,7 @@ window.addEventListener('DOMContentLoaded', function () {
         } else if (usernameInput.value.length < 10 || usernameInput.value.length > 20) {
             warningUsernameRegister.innerHTML = 'The username must have between 10 to 20 characters'
             usernameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
-            return 
+            return
         } else if (!/^[A-Z]/.test(usernameInput.value)) {
             warningUsernameRegister.innerHTML = 'The username must start with a capital letter'
             usernameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
