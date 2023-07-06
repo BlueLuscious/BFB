@@ -1,5 +1,3 @@
-import validator from "validator"
-
 export class Validations {
     validateEmail(emailInput) {
         if (emailInput.value == '') {
@@ -103,3 +101,10 @@ export class Validations {
         }
     } // validate repeated password function
 }
+
+
+
+
+/* const domain = gmail
+
+if */
