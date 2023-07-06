@@ -107,7 +107,7 @@ window.addEventListener('DOMContentLoaded', function () {
             warningEmailRegister.innerHTML = 'The email is empty'
             emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
-        } else if (emailInput.value) {
+        } else if (emailInput) {
             const domains = ['@gmail.com', '@yahoo.com', '@outlook.com']
             let isValid = false
 
