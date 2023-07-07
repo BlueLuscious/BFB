@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', function () {
             nextStepButton.style.display = 'none'
             signInButton.style.display = 'block'
             backStepButtton.disabled = false
-            backStepButtton.style.cursor = 'pointer's
+            backStepButtton.style.cursor = 'pointer'
         }
     }) // validate form's first part
 
