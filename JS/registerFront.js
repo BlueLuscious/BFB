@@ -18,9 +18,9 @@ window.addEventListener('DOMContentLoaded', function () {
     const secondPartForm = document.getElementById('secondPartForm')
 
     // buttons
-    const backStepButtton = document.getElementById('backStep')
-    const nextStepButton = document.getElementById('nextStep')
-    const signInButton = document.getElementById('signIn')
+    const backStepButtton = document.getElementById('backStepButton')
+    const nextStepButton = document.getElementById('nextStepButton')
+    const signInButton = document.getElementById('signInButton')
 
     // warnings
     const warningEmailRegister = document.getElementById('warningEmailRegister')
