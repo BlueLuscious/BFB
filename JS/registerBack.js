@@ -22,27 +22,29 @@ window.addEventListener('DOMContentLoaded', function () {
     const signInButton = document.getElementById('signIn')
 
     nextStepButton.addEventListener('click', function () {
-        validator.validateEmail(emailInput)
-        validator.validateFirstName(firstNameInput)
-        validator.validateLastName(lastNameInput)
+        const validatedEmail = validator.validateEmail(emailInput)
+        const validatedFirstName = validator.validateFirstName(firstNameInput)
+        const validatedLastName = validator.validateLastName(lastNameInput)
 
-/*         firstPartForm.style.display = 'none'
-        secondPartForm.style.display = 'block'
-        nextStepButton.style.display = 'none'
-        signInButton.style.display = 'block'
-        backStepButtton.disabled = false
-        backStepButtton.style.cursor = 'pointer' */
-        
+        if (validatedEmail && validatedFirstName && validatedLastName) {
+            firstPartForm.style.display = 'none'
+            secondPartForm.style.display = 'block'
+            nextStepButton.style.display = 'none'
+            signInButton.style.display = 'block'
+            backStepButtton.disabled = false
+            backStepButtton.style.cursor = 'pointer's
+        }
     }) // validate form's first part
 
     signInButton.addEventListener('click', function (event) {
         event.preventDefault()
 
-        validator.validateUsername(usernameInput)
-        validator.validatePassword(passwordInput)
-        validator.validateRepeatPassword(repeatPasswordInput, passwordInput)
+        const validatedUsername = validator.validateUsername(usernameInput)
+        const validatedPassword = validator.validatePassword(passwordInput)
+        const validatedRepeatPassword = validator.validateRepeatPassword(repeatPasswordInput, passwordInput)
 
-        signUpForm.submit()
+        if (validatedUsername && validatedPassword && validatedRepeatPassword) {
+            signUpForm.submit()
+        }
     }) // validate form's second part & send register
-
 })
