@@ -1,14 +1,23 @@
 window.addEventListener('DOMContentLoaded', function () {
 
+    // inputs
     const emailInput = document.getElementById('emailInput')
     const passwordInput = document.getElementById('passwordInput')
     const inputs = [emailInput, passwordInput]
+
+    // pop-up
     const showPasswordButton = document.getElementById('showPasswordButton')
     const popUpText = document.getElementById('popUpText')
     let clickCount = 0
     const contentPopUpText = ['Show Password', 'Hide Password']
+
+    // buttons
     const loginButton = document.getElementById('loginButton')
     const signUpButton = document.getElementById('signUpButton')
+
+    // warnings
+    const successfulRegister = document.getElementById('successfulRegister')
+
 
     // FRONT
     signUpButton.addEventListener('click', function () {
@@ -19,8 +28,10 @@ window.addEventListener('DOMContentLoaded', function () {
         input.addEventListener('click', function () {
             if (index == 0) {
                 this.value = ''
+                successfulRegister.innerHTML = ''
             } else if (index == 1) {
                 this.value = ''
+                successfulRegister.innerHTML = ''
             }
         }) // change input's value to blank
         input.addEventListener('focus', function () {
@@ -30,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 this.style.outlineColor = 'rgb(29, 186, 186)'
             }
         }) // change input's outline color
-    }) 
+    })
 
     showPasswordButton.addEventListener('click', function () {
         if (passwordInput.type === 'password') {
@@ -62,4 +73,29 @@ window.addEventListener('DOMContentLoaded', function () {
 
     // BACK
     // mediante loginButton validar si los datos existen en el servidor
+
+
+
+/*     // Get the message from sessionStorage
+    const message = sessionStorage.getItem('registrationMessage');
+
+    // Write the message in the div if it exists
+    if (message) {
+        successfulRegister.innerHTML = message;
+        console.log('Message:', message)
+    }
+
+    // Clear the message from sessionStorage
+    sessionStorage.removeItem('registrationMessage')
+
+
+
+    const userData = JSON.parse(localStorage.getItem('userData'));
+
+    // Check if user data exists
+    if (userData) {
+        console.log('User Data:', userData);
+    } */
+
+
 })

@@ -40,8 +40,8 @@ window.addEventListener('DOMContentLoaded', function () {
             firstName: firstNameInput.value,
             lastName: lastNameInput.value,
         }
-        localStorage.setItem('userData', JSON.stringify(userData))
- */
+        localStorage.setItem('userData', JSON.stringify(userData)) */
+
     }) // validate form's first part
 
     signInButton.addEventListener('click', function (event) {
@@ -58,6 +58,8 @@ window.addEventListener('DOMContentLoaded', function () {
             userData.username = usernameInput.value
             localStorage.setItem('userData', JSON.stringify(userData))
 
+            // Set the success message in sessionStorage
+            sessionStorage.setItem('registrationMessage', 'The registration was successful')
             // Redirect to login.html
             window.location.href = 'login.html' */
         }
