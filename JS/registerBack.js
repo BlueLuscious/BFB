@@ -1,41 +1,48 @@
 import { Validations } from './formValidations.js'
 const validator = new Validations()
 
-const emailInput = document.getElementById('emailInput')
-const firstNameInput = document.getElementById('firstNameInput')
-const lastNameInput = document.getElementById('lastNameInput')
-const usernameInput = document.getElementById('usernameInput')
-const passwordInput = document.getElementById('passwordInput')
-const repeatPasswordInput = document.getElementById('repeatPasswordInput')
-const nextStepButton = document.getElementById('nextStep')
-const signInButton = document.getElementById('signIn')
-const signUpForm = document.getElementById('signUpForm')
+window.addEventListener('DOMContentLoaded', function () {
 
-const firstPartForm = document.getElementById('firstPartForm')
-const secondPartForm = document.getElementById('secondPartForm')
-const backStepButtton = document.getElementById('backStep')
+    // inputs
+    const emailInput = document.getElementById('emailInput')
+    const firstNameInput = document.getElementById('firstNameInput')
+    const lastNameInput = document.getElementById('lastNameInput')
+    const usernameInput = document.getElementById('usernameInput')
+    const passwordInput = document.getElementById('passwordInput')
+    const repeatPasswordInput = document.getElementById('repeatPasswordInput')
 
-nextStepButton.addEventListener('click', function () {
-    if (emailInput, firstNameInput, lastNameInput){
+    // form parts
+    const firstPartForm = document.getElementById('firstPartForm')
+    const secondPartForm = document.getElementById('secondPartForm')
+    const signUpForm = document.getElementById('signUpForm')
+
+    // buttons
+    const backStepButtton = document.getElementById('backStep')
+    const nextStepButton = document.getElementById('nextStep')
+    const signInButton = document.getElementById('signIn')
+
+    nextStepButton.addEventListener('click', function () {
         validator.validateEmail(emailInput)
         validator.validateFirstName(firstNameInput)
         validator.validateLastName(lastNameInput)
-    } else {
-        firstPartForm.style.display = 'none'
+
+/*         firstPartForm.style.display = 'none'
         secondPartForm.style.display = 'block'
         nextStepButton.style.display = 'none'
         signInButton.style.display = 'block'
         backStepButtton.disabled = false
-        backStepButtton.style.cursor = 'pointer'
-    }
-}) // validate form's first part
+        backStepButtton.style.cursor = 'pointer' */
+        
+    }) // validate form's first part
 
-signInButton.addEventListener('click', function (event) {
-    event.preventDefault()
+    signInButton.addEventListener('click', function (event) {
+        event.preventDefault()
 
-    validator.validateUsername(usernameInput)
-    validator.validatePassword(passwordInput)
-    validator.validateRepeatPassword(repeatPasswordInput, passwordInput)
+        validator.validateUsername(usernameInput)
+        validator.validatePassword(passwordInput)
+        validator.validateRepeatPassword(repeatPasswordInput, passwordInput)
 
-    signUpForm.submit()
-}) // validate form's second part & send register
+        signUpForm.submit()
+    }) // validate form's second part & send register
+
+})

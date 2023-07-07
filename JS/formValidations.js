@@ -32,7 +32,7 @@ export class Validations {
             firstNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
         } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/.test(firstNameInput.value)) {
-            warningFirstNameRegister.innerHTML = 'Invalid value, only letters'
+            warningFirstNameRegister.innerHTML = 'The first name must have only letters'
             firstNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
         }
@@ -44,7 +44,7 @@ export class Validations {
             lastNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
         } else if (!/^([a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+\s)*[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/.test(lastNameInput.value)) {
-            warningLastNameRegister.innerHTML = 'Invalid value, only letters'
+            warningLastNameRegister.innerHTML = 'The last name must have only letters'
             lastNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
         }
@@ -58,7 +58,7 @@ export class Validations {
         } else if (usernameInput.value.length < 10 || usernameInput.value.length > 20) {
             warningUsernameRegister.innerHTML = 'The username must have between 10 to 20 characters'
             usernameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
-            return 
+            return
         } else if (!/^[A-Z]/.test(usernameInput.value)) {
             warningUsernameRegister.innerHTML = 'The username must start with a capital letter'
             usernameInput.style.borderBottomColor = 'rgb(195, 20, 20)'

@@ -143,7 +143,7 @@ window.addEventListener('DOMContentLoaded', function () {
             lastNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
         } else if (!/^([a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+\s)*[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/.test(lastNameInput.value)) {
-            warningLastNameRegister.innerHTML = 'The first name must have only letters'
+            warningLastNameRegister.innerHTML = 'The last name must have only letters'
             lastNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
         } else {
