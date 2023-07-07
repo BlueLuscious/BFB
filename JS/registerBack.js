@@ -11,10 +11,23 @@ const nextStepButton = document.getElementById('nextStep')
 const signInButton = document.getElementById('signIn')
 const signUpForm = document.getElementById('signUpForm')
 
+const firstPartForm = document.getElementById('firstPartForm')
+const secondPartForm = document.getElementById('secondPartForm')
+const backStepButtton = document.getElementById('backStep')
+
 nextStepButton.addEventListener('click', function () {
-    validator.validateEmail(emailInput)
-    validator.validateFirstName(firstNameInput)
-    validator.validateLastName(lastNameInput)
+    if (emailInput, firstNameInput, lastNameInput){
+        validator.validateEmail(emailInput)
+        validator.validateFirstName(firstNameInput)
+        validator.validateLastName(lastNameInput)
+    } else {
+        firstPartForm.style.display = 'none'
+        secondPartForm.style.display = 'block'
+        nextStepButton.style.display = 'none'
+        signInButton.style.display = 'block'
+        backStepButtton.disabled = false
+        backStepButtton.style.cursor = 'pointer'
+    }
 }) // validate form's first part
 
 signInButton.addEventListener('click', function (event) {

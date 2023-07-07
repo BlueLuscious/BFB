@@ -39,11 +39,6 @@ export class Validations {
     } // validate firstname function
 
     validateLastName(lastNameInput) {
-        const firstPartForm = document.getElementById('firstPartForm')
-        const secondPartForm = document.getElementById('secondPartForm')
-        const backStepButtton = document.getElementById('backStep')
-        const nextStepButton = document.getElementById('nextStep')
-        const signInButton = document.getElementById('signIn')
         if (lastNameInput.value == '') {
             warningLastNameRegister.innerHTML = 'The last name empty'
             lastNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
@@ -52,13 +47,6 @@ export class Validations {
             warningLastNameRegister.innerHTML = 'Invalid value, only letters'
             lastNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return
-        } else {
-            firstPartForm.style.display = 'none'
-            secondPartForm.style.display = 'block'
-            nextStepButton.style.display = 'none'
-            signInButton.style.display = 'block'
-            backStepButtton.disabled = false
-            backStepButtton.style.cursor = 'pointer'
         }
     } // validate lastname function & display form's second part
 
