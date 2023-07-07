@@ -4,12 +4,12 @@ const validator = new Validations()
 window.addEventListener('DOMContentLoaded', function () {
 
     // inputs
-    const emailInput = document.getElementById('emailInput')
-    const firstNameInput = document.getElementById('firstNameInput')
-    const lastNameInput = document.getElementById('lastNameInput')
-    const usernameInput = document.getElementById('usernameInput')
-    const passwordInput = document.getElementById('passwordInput')
-    const repeatPasswordInput = document.getElementById('repeatPasswordInput')
+    const emailInput = document.getElementById('emailInputRegister')
+    const firstNameInput = document.getElementById('firstNameInputRegister')
+    const lastNameInput = document.getElementById('lastNameInputRegister')
+    const usernameInput = document.getElementById('usernameInputRegister')
+    const passwordInput = document.getElementById('passwordInputRegister')
+    const repeatPasswordInput = document.getElementById('repeatPasswordInputRegister')
 
     // form parts
     const firstPartForm = document.getElementById('firstPartForm')
@@ -34,6 +34,14 @@ window.addEventListener('DOMContentLoaded', function () {
             backStepButtton.disabled = false
             backStepButtton.style.cursor = 'pointer'
         }
+
+/*         const userData = {
+            email: emailInput.value,
+            firstName: firstNameInput.value,
+            lastName: lastNameInput.value,
+        }
+        localStorage.setItem('userData', JSON.stringify(userData))
+ */
     }) // validate form's first part
 
     signInButton.addEventListener('click', function (event) {
@@ -44,7 +52,14 @@ window.addEventListener('DOMContentLoaded', function () {
         const validatedRepeatPassword = validator.validateRepeatPassword(repeatPasswordInput, passwordInput)
 
         if (validatedUsername && validatedPassword && validatedRepeatPassword) {
-            signUpForm.submit()
+
+/*             // Save data to localStorage
+            const userData = JSON.parse(localStorage.getItem('userData'))
+            userData.username = usernameInput.value
+            localStorage.setItem('userData', JSON.stringify(userData))
+
+            // Redirect to login.html
+            window.location.href = 'login.html' */
         }
     }) // validate form's second part & send register
 })

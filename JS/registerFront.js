@@ -1,12 +1,12 @@
 window.addEventListener('DOMContentLoaded', function () {
 
     // inputs
-    const emailInput = document.getElementById('emailInput')
-    const firstNameInput = document.getElementById('firstNameInput')
-    const lastNameInput = document.getElementById('lastNameInput')
-    const usernameInput = document.getElementById('usernameInput')
-    const passwordInput = document.getElementById('passwordInput')
-    const repeatPasswordInput = document.getElementById('repeatPasswordInput')
+    const emailInput = document.getElementById('emailInputRegister')
+    const firstNameInput = document.getElementById('firstNameInputRegister')
+    const lastNameInput = document.getElementById('lastNameInputRegister')
+    const usernameInput = document.getElementById('usernameInputRegister')
+    const passwordInput = document.getElementById('passwordInputRegister')
+    const repeatPasswordInput = document.getElementById('repeatPasswordInputRegister')
     const inputs = [emailInput, firstNameInput, lastNameInput, usernameInput, passwordInput, repeatPasswordInput]
 
     // pop-up
