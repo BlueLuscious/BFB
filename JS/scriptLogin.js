@@ -1,13 +1,13 @@
 window.addEventListener('DOMContentLoaded', function () {
 
     // inputs
-    const emailInput = document.getElementById('emailInput')
-    const passwordInput = document.getElementById('passwordInput')
+    const emailInput = document.getElementById('emailInputLogin')
+    const passwordInput = document.getElementById('passwordInputLogin')
     const inputs = [emailInput, passwordInput]
 
     // pop-up
     const showPasswordButton = document.getElementById('showPasswordButton')
-    const popUpText = document.getElementById('popUpText')
+    const popUpText = document.getElementById('showPasswordPopUp')
     let clickCount = 0
     const contentPopUpText = ['Show Password', 'Hide Password']
 

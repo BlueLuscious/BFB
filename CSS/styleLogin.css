@@ -63,7 +63,7 @@ button .bi {
     cursor: pointer;
 } /* show/hide password button */
 
-.password-login .show-password-pop-up {
+.password-login .show-password-pop-up-text {
     margin: 0px;
     padding: 10px;
     width: 120px;

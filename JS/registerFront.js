@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     // pop-up
     const returnToLogin = document.getElementById('returnToLogin')
-    const popUpText = document.getElementById('popUpText')
+    const popUpText = document.getElementById('returnLoginPopUp')
 
     // form parts
     const firstPartForm = document.getElementById('firstPartForm')
