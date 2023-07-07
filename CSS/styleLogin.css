@@ -81,7 +81,7 @@ button .bi {
 
 .button-table-login {
     position: absolute;
-    bottom: -85%;
+    bottom: -135%;
 }
 
 .background-image-login img {
@@ -122,4 +122,13 @@ button .bi {
     margin-top: 10px;
     color: white;
     background-color: black;
+}
+
+#successfulRegister {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    height: 15px;
+    font-size: 20px;
+    color: rgb(18, 173, 18);
 }
