@@ -1,4 +1,4 @@
-window.addEventListener('click', function () {
+window.addEventListener('DOMContentLoaded', function () {
 
     // inputs
     const emailInput = document.getElementById('emailInputLogin')
