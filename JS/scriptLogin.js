@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const loginButton = document.getElementById('loginButton')
     const signUpButton = document.getElementById('signUpButton')
 
+    // form
     const loginForm = document.getElementById('loginForm')
 
     // warnings
