@@ -1,4 +1,5 @@
 export class Validations {
+    
     validateEmail(emailInput) {
         if (emailInput.value == '') {
             warningEmailRegister.innerHTML = 'The email is empty'
