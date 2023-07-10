@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 
-/*     // Get the message from sessionStorage
+    // Get the message from sessionStorage
     const message = sessionStorage.getItem('registrationMessage');
 
     // Write the message in the div if it exists
@@ -95,7 +95,7 @@ window.addEventListener('DOMContentLoaded', function () {
     // Check if user data exists
     if (userData) {
         console.log('User Data:', userData);
-    } */
+    }
 
 
 })

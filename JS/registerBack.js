@@ -17,9 +17,9 @@ window.addEventListener('DOMContentLoaded', function () {
     const signUpForm = document.getElementById('signUpForm')
 
     // buttons
-    const backStepButtton = document.getElementById('backStep')
-    const nextStepButton = document.getElementById('nextStep')
-    const signInButton = document.getElementById('signIn')
+    const backStepButtton = document.getElementById('backStepButton')
+    const nextStepButton = document.getElementById('nextStepButton')
+    const signInButton = document.getElementById('signInButton')
 
     nextStepButton.addEventListener('click', function () {
         const validatedEmail = validator.validateEmail(emailInput)
@@ -35,12 +35,12 @@ window.addEventListener('DOMContentLoaded', function () {
             backStepButtton.style.cursor = 'pointer'
         }
 
-/*         const userData = {
+        const userData = {
             email: emailInput.value,
             firstName: firstNameInput.value,
             lastName: lastNameInput.value,
         }
-        localStorage.setItem('userData', JSON.stringify(userData)) */
+        localStorage.setItem('userData', JSON.stringify(userData))
 
     }) // validate form's first part
 
@@ -53,7 +53,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
         if (validatedUsername && validatedPassword && validatedRepeatPassword) {
 
-/*             // Save data to localStorage
+            // Save data to localStorage
             const userData = JSON.parse(localStorage.getItem('userData'))
             userData.username = usernameInput.value
             localStorage.setItem('userData', JSON.stringify(userData))
@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', function () {
             // Set the success message in sessionStorage
             sessionStorage.setItem('registrationMessage', 'The registration was successful')
             // Redirect to login.html
-            window.location.href = 'login.html' */
+            window.location.href = 'login.html'
         }
     }) // validate form's second part & send register
 })

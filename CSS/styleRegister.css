@@ -107,14 +107,14 @@ button .bi {
 }
 
 /* ID */
-#nextStep,
-#signIn {
+#nextStepButton,
+#signInButton {
   color: black;
   background-color: rgb(34, 193, 193);
   cursor: pointer;
 }
 
-#nextStep:hover {
+#nextStepButton:hover {
   animation: blink-hover 1s infinite;
 }
 @keyframes blink-hover {
@@ -123,12 +123,12 @@ button .bi {
   100% {opacity: 0.7;}
 } /* blinking next step button */
 
-#signIn {
+#signInButton {
   position: relative;
   top: -13px;
   display: none;
 }
 
-#backStep {
+#backStepButton {
   cursor: not-allowed;
 }
