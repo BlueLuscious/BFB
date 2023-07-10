@@ -25,15 +25,20 @@
                         <td class="email-login">
                             <label for="emailInputLogin">Email:</label><br><br>
                             <input type="email" name="email" id="emailInputLogin" placeholder="Enter your email">
-                            <div id="warningEmailLogin"></div>
+                            <div class="warnings" id="warningEmailLogin"></div>
                         </td>
                     </tr>
                         <td class="password-login">
                             <label for="passwordInputLogin">Password:</label><br><br>
                             <input type="password" name="password" id="passwordInputLogin" placeholder="Enter your password">
-                            <div id="warningPasswordLogin"></div>
+                            <div class="warnings" id="warningPasswordLogin"></div>
                             <button type="button" id="showPasswordButton"><div id="eyeIcon" class="bi bi-eye-fill icon"></div></button>
                             <div class="show-password-pop-up-text" id="showPasswordPopUp">Show Password</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div  class="warnings" id="warningUserData"></div>
                         </td>
                     </tr>
                 </table>

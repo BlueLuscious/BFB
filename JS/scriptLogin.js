@@ -15,7 +15,12 @@ window.addEventListener('DOMContentLoaded', function () {
     const loginButton = document.getElementById('loginButton')
     const signUpButton = document.getElementById('signUpButton')
 
+    const loginForm = document.getElementById('loginForm')
+
     // warnings
+    const warningEmailLogin = document.getElementById('warningEmailLogin')
+    const warningPasswordLogin = document.getElementById('warningPasswordLogin')
+    const warningUserData = document.getElementById('warningUserData')
     const successfulRegister = document.getElementById('successfulRegister')
 
 
@@ -28,9 +33,15 @@ window.addEventListener('DOMContentLoaded', function () {
         input.addEventListener('click', function () {
             if (index == 0) {
                 this.value = ''
+                warningEmailLogin.innerHTML = ''
+                this.style.borderBottomColor = ''
+                warningUserData.innerHTML = ''
                 successfulRegister.innerHTML = ''
             } else if (index == 1) {
                 this.value = ''
+                warningPasswordLogin.innerHTML = ''
+                this.style.borderBottomColor = ''
+                warningUserData.innerHTML = ''
                 successfulRegister.innerHTML = ''
             }
         }) // change input's value to blank
@@ -71,31 +82,41 @@ window.addEventListener('DOMContentLoaded', function () {
         popUpText.innerHTML = contentPopUpText[contentIndex]
     }) // hide show/hide-password popup by click
 
+    const successMessage = sessionStorage.getItem('successMessage')
+
+    if (successMessage) {
+        successfulRegister.innerHTML = successMessage
+        console.log('successMessage:', successMessage)
+    } // show success registration message
+    sessionStorage.removeItem('successMessage')
+
     // BACK
-    // mediante loginButton validar si los datos existen en el servidor
-
-
-
-    // Get the message from sessionStorage
-    const message = sessionStorage.getItem('registrationMessage');
-
-    // Write the message in the div if it exists
-    if (message) {
-        successfulRegister.innerHTML = message;
-        console.log('Message:', message)
-    }
-
-    // Clear the message from sessionStorage
-    sessionStorage.removeItem('registrationMessage')
-
-
-
-    const userData = JSON.parse(localStorage.getItem('userData'));
-
-    // Check if user data exists
+    const userData = JSON.parse(localStorage.getItem('userData'))
     if (userData) {
-        console.log('User Data:', userData);
-    }
+        console.log('User Data:', userData)
+    } // show in console user data
 
+    loginButton.addEventListener('click', function (event) {
+        event.preventDefault()
 
+        if (emailInput.value == '') {
+            warningEmailLogin.innerHTML = 'The email is empty'
+            emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return false
+        }
+
+        if (passwordInput.value == '') {
+            warningPasswordLogin.innerHTML = 'The password is empty'
+            passwordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return false
+        }
+
+        if (emailInput.value == userData.email && passwordInput.value == userData.password) {
+            loginForm.submit()
+        } else {
+            warningUserData.innerHTML = 'The user is not registered or the user data is invalid'
+        }
+
+    })
+    
 })

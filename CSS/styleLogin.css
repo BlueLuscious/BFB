@@ -56,7 +56,7 @@ button .bi {
 
 .password-login button {
     position: absolute;
-    top: 154px;
+    top: 184px;
     left: 380px;
     background: none;
     border: none;
@@ -68,7 +68,7 @@ button .bi {
     padding: 10px;
     width: 120px;
     position: absolute;
-    top: 149px;
+    top: 179px;
     left: 440px;
     border-radius: 6px;
     opacity: 0;
@@ -79,9 +79,15 @@ button .bi {
     background-color: black;
 } /* show password popup */
 
+.warnings {
+    margin-top: 15px;
+    height: 15px;
+    color: rgb(195, 20, 20);
+}
+
 .button-table-login {
     position: absolute;
-    bottom: -135%;
+    bottom: -90%;
 }
 
 .background-image-login img {

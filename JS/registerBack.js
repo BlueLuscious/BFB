@@ -1,4 +1,4 @@
-import { Validations } from './formValidations.js'
+import { Validations } from './registerValidations.js'
 const validator = new Validations()
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -34,14 +34,6 @@ window.addEventListener('DOMContentLoaded', function () {
             backStepButtton.disabled = false
             backStepButtton.style.cursor = 'pointer'
         }
-
-        const userData = {
-            email: emailInput.value,
-            firstName: firstNameInput.value,
-            lastName: lastNameInput.value,
-        }
-        localStorage.setItem('userData', JSON.stringify(userData))
-
     }) // validate form's first part
 
     signInButton.addEventListener('click', function (event) {
@@ -52,16 +44,19 @@ window.addEventListener('DOMContentLoaded', function () {
         const validatedRepeatPassword = validator.validateRepeatPassword(repeatPasswordInput, passwordInput)
 
         if (validatedUsername && validatedPassword && validatedRepeatPassword) {
-
-            // Save data to localStorage
-            const userData = JSON.parse(localStorage.getItem('userData'))
-            userData.username = usernameInput.value
-            localStorage.setItem('userData', JSON.stringify(userData))
-
-            // Set the success message in sessionStorage
-            sessionStorage.setItem('registrationMessage', 'The registration was successful')
-            // Redirect to login.html
             window.location.href = 'login.html'
         }
+
+        const userData = {
+            email: emailInput.value,
+            firstName: firstNameInput.value,
+            lastName: lastNameInput.value,
+            username: usernameInput.value,
+            password: passwordInput.value,
+            repeatPassword: repeatPasswordInput.value
+        } // userData.json creation
+
+        localStorage.setItem('userData', JSON.stringify(userData))
+        sessionStorage.setItem('successMessage', 'The registration was successful')
     }) // validate form's second part & send register
 })
