@@ -1,3 +1,6 @@
+import { Validations } from "./loginValidations.js"
+const validator = new Validations
+
 window.addEventListener('DOMContentLoaded', function () {
 
     // inputs
@@ -99,24 +102,16 @@ window.addEventListener('DOMContentLoaded', function () {
     loginButton.addEventListener('click', function (event) {
         event.preventDefault()
 
-        if (emailInput.value == '') {
-            warningEmailLogin.innerHTML = 'The email is empty'
-            emailInput.style.borderBottomColor = 'rgb(195, 20, 20)'
-            return false
-        }
+        const validatedEmail = validator.validateEmail(emailInput)
+        const validatedPassword = validator.validatePassword(passwordInput)
 
-        if (passwordInput.value == '') {
-            warningPasswordLogin.innerHTML = 'The password is empty'
-            passwordInput.style.borderBottomColor = 'rgb(195, 20, 20)'
-            return false
+        if (validatedEmail && validatedPassword) {
+            if (emailInput.value == userData.email && passwordInput.value == userData.password) {
+                loginForm.submit()
+            } else {
+                warningUserData.innerHTML = 'The user is not registered or the user data is invalid'
+            }
         }
-
-        if (emailInput.value == userData.email && passwordInput.value == userData.password) {
-            loginForm.submit()
-        } else {
-            warningUserData.innerHTML = 'The user is not registered or the user data is invalid'
-        }
-
     })
-    
+
 })
