@@ -1,4 +1,4 @@
-import { Validations } from "./loginValidations.js"
+import { Validations } from "../JS/loginValidations.js"
 const validator = new Validations
 
 window.addEventListener('DOMContentLoaded', function () {
