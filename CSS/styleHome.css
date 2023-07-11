@@ -1,0 +1,33 @@
+/* ELEMENT */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* CLASS */
+.header-home {
+    position: fixed;
+    top: 0;
+    left: 102px;
+    right: 0;
+    border: 2px solid;
+}
+
+.header-home h1 {
+    position: relative;
+    left: 50px;
+}
+
+.left-side-bar-home {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    border: 2px solid;
+}
+
+.main-content-home {
+    margin-top: 100px;
+    margin-left: 150px;
+}
