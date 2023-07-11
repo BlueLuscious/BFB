@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sidebar">
+        <button id="homeBtn"><div id="homeContent" class="hidden">Welcome to the Home Page</div></button><br><br>
+        <button id="videosBtn"><div id="videosContent" class="hidden">Check out our Videos</div></button><br><br>
+        <button id="languagesBtn"><div id="languagesContent" class="hidden">Explore Different Languages</div></button>
+    </div>
+    <style>
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+    
+        .sidebar div {
+            margin-left: 10px;
+            padding: 10px;
+        }
+    
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        const homeBtn = document.getElementById('homeBtn');
+        const videosBtn = document.getElementById('videosBtn');
+        const languagesBtn = document.getElementById('languagesBtn');
+    
+        const homeContent = document.getElementById('homeContent');
+        const videosContent = document.getElementById('videosContent');
+        const languagesContent = document.getElementById('languagesContent');
+    
+        homeBtn.addEventListener('mouseover', function () {
+            homeContent.classList.remove('hidden');
+        });
+    
+        videosBtn.addEventListener('mouseover', function () {
+            videosContent.classList.remove('hidden');
+        });
+    
+        languagesBtn.addEventListener('mouseover', function () {
+            languagesContent.classList.remove('hidden');
+        });
+    
+        homeBtn.addEventListener('mouseout', function () {
+            homeContent.classList.add('hidden');
+        });
+    
+        videosBtn.addEventListener('mouseout', function () {
+            videosContent.classList.add('hidden');
+        });
+    
+        languagesBtn.addEventListener('mouseout', function () {
+            languagesContent.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
+
+
+
+
