@@ -33,6 +33,10 @@ export class Validations {
             warningFirstNameRegister.innerHTML = 'The first name empty'
             firstNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return false
+        }  else if (!/^[A-Z][a-z]*$/.test(firstNameInput.value)) {
+            warningFirstNameRegister.innerHTML = 'The first name must start with a capital letter'
+            firstNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return false
         } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/.test(firstNameInput.value)) {
             warningFirstNameRegister.innerHTML = 'The first name must have only letters'
             firstNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
@@ -45,6 +49,10 @@ export class Validations {
         if (lastNameInput.value == '') {
             warningLastNameRegister.innerHTML = 'The last name empty'
             lastNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
+            return false
+        } else if (!/^[A-Z][a-z]*$/.test(firstNameInput.value)) {
+            warningFirstNameRegister.innerHTML = 'The last name must start with a capital letter'
+            firstNameInput.style.borderBottomColor = 'rgb(195, 20, 20)'
             return false
         } else if (!/^([a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+\s)*[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$/.test(lastNameInput.value)) {
             warningLastNameRegister.innerHTML = 'The last name must have only letters'
