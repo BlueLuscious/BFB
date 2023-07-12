@@ -114,7 +114,9 @@ button .bi {
   cursor: pointer;
 }
 
-#nextStepButton:hover {
+#nextStepButton:hover,
+#signInButton:hover,
+#backStepButton:hover {
   animation: blink-hover 1s infinite;
 }
 @keyframes blink-hover {
