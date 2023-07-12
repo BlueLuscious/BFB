@@ -8,7 +8,6 @@ body {
 
 td {
     padding-top: 50px;
-    font-size: 30px;
 }
 
 /* CLASS */
@@ -48,8 +47,13 @@ td {
 
 .left-side-bar-home table {
     position: absolute;
-    top: 96px;
+    top: 90px;
     left: 35px;
+}
+
+.left-side-bar-home button {
+    margin-left: -13px;
+    font-size: 35px;
 }
 
 .main-content-home {
