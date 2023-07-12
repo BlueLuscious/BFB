@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded', function () {
     // form parts
     const firstPartForm = document.getElementById('firstPartForm')
     const secondPartForm = document.getElementById('secondPartForm')
+    const signUpForm = document.getElementById('signUpForm')
 
     // buttons
     const backStepButtton = document.getElementById('backStepButton')
@@ -44,6 +45,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
         if (validatedUsername && validatedPassword && validatedRepeatPassword) {
             window.location.href = 'login.html'
+            // signUpForm.submit()
         }
 
         const userData = {

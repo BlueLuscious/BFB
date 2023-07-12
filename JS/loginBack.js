@@ -25,7 +25,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
         if (validatedEmail && validatedPassword) {
             if (emailInput.value == userData.email && passwordInput.value == userData.password) {
-                loginForm.submit()
+                window.location.href = 'home.html'
+                //loginForm.submit()
             } else {
                 warningUserData.innerHTML = 'The user is not registered or the user data is invalid'
             }
