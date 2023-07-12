@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', function () {
         const validatedRepeatPassword = validator.validateRepeatPassword(repeatPasswordInput, passwordInput)
 
         if (validatedUsername && validatedPassword && validatedRepeatPassword) {
-            window.location.href = 'login.html'
+            window.location.href = 'index.html'
         }
 
         const userData = {

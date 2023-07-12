@@ -77,7 +77,7 @@ window.addEventListener('DOMContentLoaded', function () {
     })
 
     returnToLogin.addEventListener('click', function () {
-        window.location.href = 'login.html'
+        window.location.href = 'index.html'
     }) // return login-button redirects to login.html
 
     returnToLogin.addEventListener('mouseover', function () {
